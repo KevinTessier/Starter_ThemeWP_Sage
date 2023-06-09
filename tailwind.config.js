@@ -4,6 +4,14 @@ const config = {
   theme: {
     extend: {
       colors: {}, // Extend Tailwind's default colors
+      // fontFamily:{
+      //   title : ['Crake'],
+      //   body : ['GalanoGrotesqueAlt']
+      // },
+      container: {
+        center: true,
+        padding: "2rem",
+      },
     },
   },
   plugins: [],
