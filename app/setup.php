@@ -167,8 +167,3 @@ remove_action("wp_body_open", "wp_global_styles_render_svg_filters");
 
 // Suppression des SVG duotone du plugin Gutenberg
 remove_action("wp_body_open", "gutenberg_global_styles_render_svg_filters");
-
-
-// Suppression des lazy sur images -- bug le rendu au scroll
-add_filter( 'wp_lazy_loading_enabled', '__return_false' );
-
