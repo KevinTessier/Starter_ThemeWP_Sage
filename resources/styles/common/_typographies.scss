@@ -1,0 +1,41 @@
+
+h1, h2, h3, h4, h5 {
+	@apply font-medium font-title;
+}
+
+h1 {
+	@apply my-10;
+}
+
+h2 {
+	@apply my-10 text-5xl font-bold ;
+}
+
+h3 {
+	@apply text-2xl;
+}
+
+p, a, ul, ol, li, blockquote{
+	@apply font-body;
+}
+
+ul,li,ol {
+	@apply list-inside list-disc;
+}
+
+p{
+	@apply my-6;
+}
+
+p, li {
+	@apply text-2xl leading-snug;
+}
+
+p, blockquote {
+	&:nth-child(1) {
+		@apply mt-0;
+	}
+	&:nth-last-child(1) {
+		@apply mb-0;
+	}
+}
