@@ -37,6 +37,3 @@ add_filter('script_loader_tag', function($tag, $handle){
 add_filter('style_loader_tag', function($tag, $handle){
     return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
 }, 10, 2);
-
-// Suppression des lazy sur images -- bug le rendu au scroll
-// add_filter( 'wp_lazy_loading_enabled', '__return_false' );
