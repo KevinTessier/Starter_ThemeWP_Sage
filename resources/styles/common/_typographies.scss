@@ -1,3 +1,18 @@
+/**
+ * Path variables
+ */
+ @font-face {
+    font-family: 'your-font';
+    src: local('your-font'), local('your-font-name'),
+        url('@fonts/your-font.woff2') format('woff2'),
+        url('@fonts/your-font.woff') format('woff'),
+        url('@fonts/your-font.ttf') format('truetype'),
+        url('@fonts/your-font.svg#your-font') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 h1, h2, h3, h4, h5 {
 	@apply font-medium font-title;
