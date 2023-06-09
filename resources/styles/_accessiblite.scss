@@ -1,0 +1,17 @@
+#access_fast{
+    @apply absolute;
+}
+
+#access_fast a, #access_fast .btn_accessibilite{
+    @apply inline-block absolute bg-white;
+    color: #555;
+    padding: .5em;
+    left: -99999rem;
+    z-index: 100;
+}
+
+#access_fast {
+    a:focus, .btn_accessibilite:focus {
+        left: 0;
+    }
+}
