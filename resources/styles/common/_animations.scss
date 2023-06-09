@@ -1,0 +1,91 @@
+@mixin animate_link_prepare($color) {
+  @apply relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -0.2rem;
+    left: 0;
+    background-color: $color;
+    transform-origin: bottom right;
+    transition: transform .6s cubic-bezier(.77, 0, .175, 1);
+  }
+
+}
+
+@mixin animate_link_active() {
+  &:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform .6s cubic-bezier(.77, 0, .175, 1);
+  }
+}
+
+// keyframe Loader
+@keyframes loader {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+//Animate rotate
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+.reveal-loaded .reveal [class*="reveal-"] {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  transition: 0s !important;
+}
+
+.reveal-loaded [class*="reveal-"] {
+  transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+.reveal-loaded .reveal-2 {
+  transition-delay: .1s;
+}
+
+.reveal-loaded .reveal-3 {
+  transition-delay: .2s;
+}
+
+.reveal-loaded .reveal-4 {
+  transition-delay: .3s;
+}

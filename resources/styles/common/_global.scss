@@ -1,0 +1,83 @@
+// Global styles are set in the Tailwind config using a plugin
+body,
+html {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-size: 14px;
+	line-height: 1.6;
+	min-height: 100vh;
+	@apply font-normal bg-stone-50 my-0 mx-0;
+
+	@screen md {
+		font-size: 16px;
+	}
+
+}
+
+// UI COMPONENTS
+// Iframe
+iframe,
+.iframe {
+	@apply w-full h-full aspect-video;
+}
+
+// STATUS
+.error {
+	&.is-active {
+		@apply block text-red-500;
+	}
+}
+
+// LOADERS
+.loader {
+	z-index: 10;
+	position: absolute;
+	display: none;
+	left: 50%;
+	top: 100px;
+	transform: translate(-50%, -50%);
+	width: 70px;
+	height: 70px;
+
+	div {
+		position: absolute;
+		border: 4px solid black;
+		opacity: 1;
+		border-radius: 50%;
+		animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+		&:nth-child(2) {
+			animation-delay: -0.5s;
+		}
+	}
+
+	&.is-active {
+		@apply block;
+	}
+}
+
+@if $smoothScrolling {
+	border-radius: $size / 2;
+
+	// SMOOTH SCROLLING
+	html::-webkit-scrollbar {
+		display: none;
+	}
+
+	#js-contentBox {
+		transition: opacity .5s ease-in;
+		opacity: 1;
+	}
+
+	.contentContainer .contentBox {
+		will-change: transform;
+	}
+
+	.contentContainer {
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+		overflow: hidden;
+	}
+}
