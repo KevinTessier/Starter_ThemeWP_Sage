@@ -20,7 +20,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_dequeue_style( 'wp-block-library' );
     wp_dequeue_style( 'wp-block-library-theme' );
     wp_dequeue_style( 'wc-blocks-style' );
-    
+
 }, 100);
 
 /**
@@ -141,6 +141,25 @@ add_action('widgets_init', function () {
     ] + $config);
 });
 
+add_action('widgets_init', function() {
+    register_sidebar([
+      'name'          => __('Primary', 'sage'),
+      'id'            => 'sidebar-primary',
+      'before_widget' => '<section class="widget %1$s %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>'
+    ]);
+
+    register_sidebar([
+      'name'          => __('Footer', 'sage'),
+      'id'            => 'sidebar-footer',
+      'before_widget' => '<section class="widget %1$s %2$s">',
+      'after_widget'  => '</section>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>'
+    ]);
+});
 
 add_action( 'init', function(){
     remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
@@ -152,18 +171,20 @@ add_action( 'init', function(){
     remove_action( 'wp_head', 'wp_generator');
     remove_action( 'wp_head', 'wp_shortlink_wp_head', 10);
     remove_action( 'wp_head', 'wp_oembed_add_host_js');
-    remove_action('wp_head', 'feed_links_extra', 3);
+    remove_action( 'wp_head', 'feed_links_extra', 3);
 
     remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
     remove_action( 'wp_print_styles', 'print_emoji_styles' );
-    remove_action( 'admin_print_styles', 'print_emoji_styles' );   
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );
     remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );     
+    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
     remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 });
 
-// Suppression des SVG duotone de WordPress 
+// Suppression des SVG duotone de WordPress
 remove_action("wp_body_open", "wp_global_styles_render_svg_filters");
 
 // Suppression des SVG duotone du plugin Gutenberg
 remove_action("wp_body_open", "gutenberg_global_styles_render_svg_filters");
+
+

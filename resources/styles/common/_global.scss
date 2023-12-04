@@ -15,6 +15,11 @@ html {
 
 }
 
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
+
 // UI COMPONENTS
 // Iframe
 iframe,
@@ -58,26 +63,24 @@ iframe,
 }
 
 @if $smoothScrolling {
-	border-radius: $size / 2;
+  html.lenis {
+    height: auto;
+  }
 
-	// SMOOTH SCROLLING
-	html::-webkit-scrollbar {
-		display: none;
-	}
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
 
-	#js-contentBox {
-		transition: opacity .5s ease-in;
-		opacity: 1;
-	}
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
 
-	.contentContainer .contentBox {
-		will-change: transform;
-	}
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
 
-	.contentContainer {
-		height: 100vh;
-		width: 100vw;
-		position: fixed;
-		overflow: hidden;
-	}
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
 }
+

@@ -16,6 +16,26 @@ add_filter('excerpt_more', function () {
 });
 
 /**
+ * Allowed block Gutenberg
+ */
+add_filter( 'allowed_block_types_all', function() {
+    // list active block gutenberg
+  	return [
+        'core/heading',
+        'core/paragraph',
+        'core/list',
+        'core/list-item',
+        'core/buttons',
+        'core/button',
+        'core/group',
+
+        // active Block Custom
+        // 'acf/name-block',
+    ];
+}, 10, 0 );
+
+
+/**
  * Disable extra RSS feeds.
  *
  * @return void

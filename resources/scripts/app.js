@@ -1,11 +1,14 @@
 import domReady from '@roots/sage/client/dom-ready';
 import ToogleBurger from '@scripts/features/toogleBurger.js';
+import ScrollSmooth from '@scripts/features/ScrollSmooth.js';
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
   ToogleBurger.init();
+  ScrollSmooth.init();
+
 });
 
 /**
