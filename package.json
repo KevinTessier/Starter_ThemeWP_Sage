@@ -23,15 +23,17 @@
     "test": "yarn lint"
   },
   "devDependencies": {
-    "@roots/bud": "6.12.2",
-    "@roots/bud-eslint": "6.12.2",
-    "@roots/bud-prettier": "6.12.2",
-    "@roots/bud-stylelint": "6.12.2",
-    "@roots/bud-tailwindcss": "6.12.2",
-    "@roots/eslint-config": "6.12.2",
-    "@roots/sage": "6.12.2"
+    "@roots/bud": "6.18.0",
+    "@roots/bud-eslint": "6.18.0",
+    "@roots/bud-prettier": "6.18.0",
+    "@roots/bud-stylelint": "6.18.0",
+    "@roots/bud-tailwindcss": "6.18.0",
+    "@roots/eslint-config": "6.18.0",
+    "@roots/sage": "6.18.0"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001497"
+    "caniuse-lite": "^1.0.30001497",
+    "@studio-freight/lenis": "^1.0.27",
+    "scrollreveal": "^4.0.9"
   }
 }
