@@ -11,9 +11,11 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while(have_posts()) @php(the_post())
-    @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
-  @endwhile
+  <section class="w-full grid gap-y-16 grid-cols-1 lg:grid-cols-2 lg:gap-x-16 xl:gap-x-32">
+    @while(have_posts()) @php(the_post())
+      @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
+    @endwhile
+  </section>
 
   {!! get_the_posts_navigation() !!}
 @endsection

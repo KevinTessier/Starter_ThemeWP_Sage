@@ -1,56 +1,30 @@
-/**
- * Path variables
- */
- @font-face {
-    font-family: 'your-font';
-    src: local('your-font'), local('your-font-name'),
-        url('@fonts/your-font.woff2') format('woff2'),
-        url('@fonts/your-font.woff') format('woff'),
-        url('@fonts/your-font.ttf') format('truetype'),
-        url('@fonts/your-font.svg#your-font') format('svg');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-
 h1, h2, h3, h4, h5 {
-	@apply font-medium font-title;
+	font-family: $FontTitle;
+  line-height: $lineHeightSnug;
 }
 
-h1 {
-	@apply my-10;
+h1{
+  font-size: $fontsizeH1;
+}
+h2{
+  font-size: $fontsizeH2;
+}
+h3{
+  font-size: $fontsizeH3;
+}
+h4{
+  font-size: $fontsizeH4;
+}
+h5{
+  font-size: $fontsizeBase;
 }
 
-h2 {
-	@apply my-10 text-5xl font-bold ;
-}
-
-h3 {
-	@apply text-2xl;
-}
-
-p, a, ul, ol, li, blockquote{
-	@apply font-body;
+p,a,li,span,blockquote,figcaption{
+	font-family: $FontBody;
+  font-size: $fontsizeBase;
+  line-height: $lineHeightSnug;
 }
 
 ul,li,ol {
 	@apply list-inside list-disc;
-}
-
-p{
-	@apply my-6;
-}
-
-p, li {
-	@apply text-2xl leading-snug;
-}
-
-p, blockquote {
-	&:nth-child(1) {
-		@apply mt-0;
-	}
-	&:nth-last-child(1) {
-		@apply mb-0;
-	}
 }

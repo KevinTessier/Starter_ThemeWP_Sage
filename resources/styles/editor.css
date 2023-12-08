@@ -3,3 +3,34 @@
   width:100%;
   margin:auto;
 }
+
+.editor-styles-wrapper
+.wp-block-columns,
+.editor-styles-wrapper
+.wp-block-group{
+  margin: 4rem 0;
+}
+
+.wp-block-group,
+.wp-block-columns,
+.wp-block-column,
+.wp-block-paragraph,
+.wp-block-image,
+.wp-block-list,
+.wp-block-heading,
+.wp-block-buttons{
+  background : rgba(222, 225, 219, 0.25);
+  padding: 1rem;
+}
+
+.has-body-font-family{
+  font-family : var(--wp--preset--font-family--body);
+}
+
+.has-title-font-title{
+  font-family : var(--wp--preset--font-family--title);
+}
+
+p,li{
+  font-family : var(--wp--preset--font-family--body);
+}

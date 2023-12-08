@@ -24,7 +24,6 @@
   }
 }
 
-// keyframe Loader
 @keyframes loader {
   0% {
     top: 36px;
@@ -59,10 +58,28 @@
   }
 }
 
-//Animate rotate
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+@keyframes bounce {
+
+  0% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in-out;
+  }
+
+  50% {
+    transform: translateY(-20px);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in-out;
+  }
+
 }

@@ -1,3 +1,16 @@
+// GLOBAL TEXT
+.has-text-align-center {
+  @apply text-center;
+}
+
+.has-text-align-left {
+  @apply text-left;
+}
+
+.has-text-align-right {
+  @apply text-right;
+}
+
 //IMAGE
 .wp-block-image {
   @apply my-7 relative;
@@ -95,79 +108,56 @@
 
 }
 
-//COLUMNS 
+//COLUMNS
 .wp-block-columns {
-  @apply flex flex-col my-8;
+  @apply flex flex-col;
 
   @screen lg {
     @apply flex-row;
   }
-
-  .wp-block-column {
-    @apply flex-1 my-4 mx-0;
-
-    @screen lg {
-      @apply my-0;
-    }
-
-    .wp-block-heading {
-      @apply mt-0;
-    }
-
-    &.is-vertically-aligned-center {
-      @apply flex items-center;
-    }
-
-    &.is-vertically-aligned-bottom {
-      @apply flex items-end;
-    }
-  }
-
   &.are-vertically-aligned-top {
     @screen lg {
       @apply items-start;
     }
   }
-
+  &.are-vertically-aligned-top {
+    @screen lg {
+      @apply items-start;
+    }
+  }
+  &.are-vertically-aligned-center {
+    @screen lg {
+      @apply items-center;
+    }
+  }
   &.are-vertically-aligned-bottom {
     @screen lg {
       @apply items-end;
     }
   }
 
+  .wp-block-column {
+    @apply flex-1;
 
-  // image in columns
-  .wp-block-image {
-    @apply my-6;
-
-    &:nth-child(1) {
-      @apply mt-0;
+    &.is-vertically-aligned-top {
+      @apply flex items-top;
     }
-
-    &:nth-last-child(1) {
-      @apply mb-0;
+    &.is-vertically-aligned-center {
+      @apply flex items-center;
     }
-
-    .wp-element-caption {
-      @apply font-body font-semibold;
+    &.is-vertically-aligned-bottom {
+      @apply flex items-end;
     }
   }
+
 }
 
 //MEDIA TEXT
 .wp-block-media-text {
-  @apply flex flex-col my-12;
+  @apply flex flex-col;
 
   @screen lg {
-    @apply flex-row space-x-12;
-  }
-
-  &.is-image-fill {
-    @screen lg {
-      img {
-        @apply hidden;
-      }
-    }
+    @apply flex-row;
   }
 
   &.is-vertically-aligned-start {
@@ -182,64 +172,10 @@
     @apply items-end;
   }
 
-  .wp-block-media-text__media {
-    @apply flex-1 my-6;
-
-    img {
-      @apply shadow rounded;
-      position: relative;
-      max-width: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-      transform-style: preserve-3d;
-    }
-  }
-
-  .wp-block-media-text__content {
-    @apply flex-1 my-6;
-  }
-
 }
 
 // BLOCK CODE
 .wp-block-code {
-  @apply px-6 py-10 rounded-xl bg-gray-200;
+  @apply rounded-xl bg-gray-200;
   white-space: break-spaces;
-}
-
-// BLOCK GROUP 
-.wp-block-group {
-  @apply my-24;
-
-  @screen xl {
-    @apply my-56;
-  }
-
-  &:last-child {
-    @apply mb-0;
-  }
-}
-
-// BLOCK QUOTE
-.wp-block-quote {
-  p {
-    @apply text-4xl leading-relaxed font-medium;
-  }
-
-  cite {
-    @apply text-xl font-medium italic;
-  }
-}
-
-// GLOBAL
-.has-text-align-center {
-  @apply text-center;
-}
-
-.has-text-align-left {
-  @apply text-left;
-}
-
-.has-text-align-right {
-  @apply text-right;
 }

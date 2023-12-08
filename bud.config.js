@@ -52,15 +52,164 @@ export default async (app) => {
     .set('settings.color.defaultDuotone', false)
     .set('settings.color.defaultGradients', false)
     .set('settings.color.defaultPalette', false)
-    .set('settings.color.duotone', [])
-    .set('settings.custom.spacing', {})
-    .set('settings.custom.typography.font-size', {})
-    .set('settings.custom.typography.line-height', {})
-    .set('settings.spacing.padding', true)
-    .set('settings.spacing.units', ['px', '%', 'em', 'rem', 'vw', 'vh'])
+    .set('settings.spacing.padding', false)
+    .set('settings.spacing.units', ['px', '%', 'rem'])
     .set('settings.typography.customFontSize', false)
+    .set('settings.typography.fluid', true)
+    .set('settings.typography.fontSizes',
+    [
+      {
+        "slug": "text-xs",
+        "size": "0.75rem",
+        "name": "text-xs",
+        "fluid": {
+          "min": "0.5rem",
+          "max": "0.75rem"
+        }
+      },
+      {
+        "slug": "text-sm",
+        "size": "0.875rem",
+        "name": "text-xs",
+        "fluid": {
+          "min": "0.75rem",
+          "max": "0.875rem"
+        }
+      },
+      {
+        "slug": "text-base",
+        "size": "1rem",
+        "name": "text-base",
+        "fluid": {
+          "min": "0.75rem",
+          "max": "1rem"
+        }
+      },
+      {
+        "slug": "text-lg",
+        "size": "1.125rem",
+        "name": "text-lg",
+        "fluid": {
+          "min": "1rem",
+          "max": "1.125rem"
+        }
+      },
+      {
+        "slug": "text-xl",
+        "size": "1.25rem",
+        "name": "text-xl",
+        "fluid": {
+          "min": "1.125rem",
+          "max": "1.25rem"
+        }
+      },
+      {
+        "slug": "text-2xl",
+        "size": "1.5rem",
+        "name": "text-2xl",
+        "fluid": {
+          "min": "1.25rem",
+          "max": "1.5rem"
+        }
+      },
+      {
+        "slug": "text-3xl",
+        "size": "1.5rem",
+        "name": "text-3xl",
+        "fluid": {
+          "min": "1.5rem",
+          "max": "1.875rem"
+        }
+      },
+      {
+        "slug": "text-4xl",
+        "size": "2.25rem",
+        "name": "text-4xl",
+        "fluid": {
+          "min": "1.875rem",
+          "max": "2.25rem"
+        }
+      },
+      {
+        "slug": "text-5xl",
+        "size": "3rem",
+        "name": "text-5xl",
+        "fluid": {
+          "min": "2.25rem",
+          "max": "3rem"
+        }
+      },
+      {
+        "slug": "text-6xl",
+        "size": "3.75rem",
+        "name": "text-6xl",
+        "fluid": {
+          "min": "3rem",
+          "max": "3.75rem"
+        }
+      },
+      {
+        "slug": "text-7xl",
+        "size": "4.5rem",
+        "name": "text-7xl",
+        "fluid": {
+          "min": "3.75rem",
+          "max": "4.5rem"
+        }
+      },
+      {
+        "slug": "text-8xl",
+        "size": "6rem",
+        "name": "text-8xl",
+        "fluid": {
+          "min": "4.5rem",
+          "max": "6rem"
+        }
+      },
+      {
+        "slug": "text-9xl",
+        "size": "8rem",
+        "name": "text-9xl",
+        "fluid": {
+          "min": "6rem",
+          "max": "8rem"
+        }
+      },
+    ]
+    )
+    .set('settings.typography.line-height',
+    {
+        "slug": "leading-none",
+        "size": "1",
+        "name": "leading-none	",
+    },
+    {
+      "slug": "leading-tight",
+      "size": "1.25",
+      "name": "leading-tight",
+    },
+    {
+      "slug": "leading-snug",
+      "size": "1.375",
+      "name": "leading-snug",
+    },
+    {
+      "slug": "leading-normal",
+      "size": "1.5",
+      "name": "leading-normal",
+    },
+    {
+      "slug": "leading-relaxed",
+      "size": "1.625",
+      "name": "leading-relaxed",
+    },
+    {
+      "slug": "leading-loose",
+      "size": "2",
+      "name": "leading-loose",
+    }
+    )
     .useTailwindColors()
     .useTailwindFontFamily()
-    .useTailwindFontSize()
     .enable();
 };

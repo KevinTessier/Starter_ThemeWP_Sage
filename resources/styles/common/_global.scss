@@ -4,21 +4,17 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-	font-size: 14px;
-	line-height: 1.6;
 	min-height: 100vh;
-	@apply font-normal bg-stone-50 my-0 mx-0;
-
-	@screen md {
-		font-size: 16px;
-	}
-
+	line-height: 1.6;
+  font-size: 16px;
+  font-weight: normal;
+  margin:0;
+  padding: 0;
+  background-color: rgb(250 250 249 / 1);
+  &.sr .load-hidden {
+    visibility: hidden;
+  }
 }
-
-html.sr .load-hidden {
-  visibility: hidden;
-}
-
 
 // UI COMPONENTS
 // Iframe
@@ -31,34 +27,6 @@ iframe,
 .error {
 	&.is-active {
 		@apply block text-red-500;
-	}
-}
-
-// LOADERS
-.loader {
-	z-index: 10;
-	position: absolute;
-	display: none;
-	left: 50%;
-	top: 100px;
-	transform: translate(-50%, -50%);
-	width: 70px;
-	height: 70px;
-
-	div {
-		position: absolute;
-		border: 4px solid black;
-		opacity: 1;
-		border-radius: 50%;
-		animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-
-		&:nth-child(2) {
-			animation-delay: -0.5s;
-		}
-	}
-
-	&.is-active {
-		@apply block;
 	}
 }
 
