@@ -1,181 +1,171 @@
-// GLOBAL TEXT
+/* GLOBAL TEXT */
 .has-text-align-center {
-  @apply text-center;
+    @apply text-center;
 }
 
 .has-text-align-left {
-  @apply text-left;
+    @apply text-left;
 }
 
 .has-text-align-right {
-  @apply text-right;
+    @apply text-right;
 }
 
-//IMAGE
+/* IMAGE */
 .wp-block-image {
-  @apply my-7 relative;
+    @apply my-7 relative;
 
-  a {
-    @apply relative transform transform-cpu scale-100 transition-all duration-700 overflow-hidden relative block z-50;
-
-    img {
-      @apply object-cover transform scale-100 transition-all duration-1000 ease-in-out;
-    }
-
-    &~.wp-element-caption {
-      @apply mt-2 transform translate-y-0 z-0 opacity-100 transition-all duration-700;
-    }
-
-    @screen lg {
-
-      &:hover {
-        @apply scale-x-95 scale-y-90 transition-all duration-1000 ease-in-out;
+    a {
+        @apply relative transform scale-100 transition-all duration-700 overflow-hidden block z-50;
 
         img {
-          @apply transform scale-x-105 scale-y-[1.1] transition-all duration-1000 ease-in-out;
+            @apply object-cover transform scale-100 transition-all duration-1000 ease-in-out;
         }
 
-        &~.wp-element-caption {
-          @apply my-0 transform translate-y-1/2 z-0 opacity-100 transition-all duration-700;
+        & ~ .wp-element-caption {
+            @apply mt-2 transform translate-y-0 z-0 opacity-100 transition-all duration-700;
         }
-      }
 
-      &~.wp-element-caption {
-        @apply absolute bottom-0 translate-y-0 my-0 px-4 opacity-0 transition-all duration-700 font-body font-semibold;
-      }
+        @screen lg {
+            &:hover {
+                @apply scale-x-95 scale-y-90 transition-all duration-1000 ease-in-out;
+
+                img {
+                    @apply transform scale-x-105 scale-y-[1.1] transition-all duration-1000 ease-in-out;
+                }
+
+                & ~ .wp-element-caption {
+                    @apply my-0 transform translate-y-1/2 z-0 opacity-100 transition-all duration-700;
+                }
+            }
+
+            & ~ .wp-element-caption {
+                @apply absolute bottom-0 translate-y-0 my-0 px-4 opacity-0 transition-all duration-700 font-body font-semibold;
+            }
+        }
     }
 
-  }
-
-  img {
-    @apply shadow;
-  }
-
-  &.is-style-rounded {
     img {
-      @apply rounded-md;
-    }
-  }
-
-  .wp-element-caption {
-    @apply mt-1 px-4 font-body font-semibold text-lg;
-
-    @screen lg {
-      @apply text-lg;
-    }
-  }
-
-  .aligncenter {
-    img {
-      @apply mx-auto;
+        @apply shadow;
     }
 
-    figcaption {
-      @apply text-center;
+    &.is-style-rounded {
+        img {
+            @apply rounded-md;
+        }
     }
-  }
 
+    .wp-element-caption {
+        @apply mt-1 px-4 font-body font-semibold text-lg;
 
+        @screen lg {
+            @apply text-lg;
+        }
+    }
+
+    .aligncenter {
+        img {
+            @apply mx-auto;
+        }
+
+        figcaption {
+            @apply text-center;
+        }
+    }
 }
 
-//BUTTONS
+/* BUTTONS */
 .wp-block-buttons {
-  @apply flex space-x-6 my-6;
+    @apply flex space-x-6 my-6;
 }
 
 .wp-block-button {
-  @extend .btn;
+    @extend .btn;
 
-  &.is-style-fill {
-    .wp-block-button__link {
-      @apply bg-gray-400 text-white;
+    &.is-style-fill {
+        .wp-block-button__link {
+            @apply bg-gray-400 text-white;
+        }
     }
-  }
 
-  &.is-style-outline {
-    .wp-block-button__link {
-      @apply border-2;
+    &.is-style-outline {
+        .wp-block-button__link {
+            @apply border-2;
+        }
     }
-  }
 
-  .wp-block-button__link {
-    @apply rounded-full px-4 py-2;
-  }
-
-  .wp-block-button__link {
-    @apply block;
-  }
-
+    .wp-block-button__link {
+        @apply block rounded-full px-4 py-2;
+    }
 }
 
-//COLUMNS
+/* COLUMNS */
 .wp-block-columns {
-  @apply flex flex-col;
+    @apply flex flex-col;
 
-  @screen lg {
-    @apply flex-row;
-  }
-  &.are-vertically-aligned-top {
     @screen lg {
-      @apply items-start;
+        @apply flex-row;
     }
-  }
-  &.are-vertically-aligned-top {
-    @screen lg {
-      @apply items-start;
-    }
-  }
-  &.are-vertically-aligned-center {
-    @screen lg {
-      @apply items-center;
-    }
-  }
-  &.are-vertically-aligned-bottom {
-    @screen lg {
-      @apply items-end;
-    }
-  }
 
-  .wp-block-column {
-    @apply flex-1;
+    &.are-vertically-aligned-top {
+        @screen lg {
+            @apply items-start;
+        }
+    }
 
-    &.is-vertically-aligned-top {
-      @apply flex items-top;
+    &.are-vertically-aligned-center {
+        @screen lg {
+            @apply items-center;
+        }
     }
-    &.is-vertically-aligned-center {
-      @apply flex items-center;
-    }
-    &.is-vertically-aligned-bottom {
-      @apply flex items-end;
-    }
-  }
 
+    &.are-vertically-aligned-bottom {
+        @screen lg {
+            @apply items-end;
+        }
+    }
+
+    .wp-block-column {
+        @apply flex-1;
+
+        &.is-vertically-aligned-top {
+            @apply flex items-top;
+        }
+
+        &.is-vertically-aligned-center {
+            @apply flex items-center;
+        }
+
+        &.is-vertically-aligned-bottom {
+            @apply flex items-end;
+        }
+    }
 }
 
-//MEDIA TEXT
+/* MEDIA TEXT */
 .wp-block-media-text {
-  @apply flex flex-col;
+    @apply flex flex-col;
 
-  @screen lg {
-    @apply flex-row;
-  }
+    @screen lg {
+        @apply flex-row;
+    }
 
-  &.is-vertically-aligned-start {
-    @apply items-start;
-  }
+    &.is-vertically-aligned-start {
+        @apply items-start;
+    }
 
-  &.is-vertically-aligned-center {
-    @apply items-center;
-  }
+    &.is-vertically-aligned-center {
+        @apply items-center;
+    }
 
-  &.is-vertically-aligned-bottom {
-    @apply items-end;
-  }
-
+    &.is-vertically-aligned-bottom {
+        @apply items-end;
+    }
 }
 
-// BLOCK CODE
+/* BLOCK CODE */
 .wp-block-code {
-  @apply rounded-xl bg-gray-200;
-  white-space: break-spaces;
+    @apply rounded-xl bg-gray-200;
+
+    white-space: break-spaces;
 }

@@ -1,34 +1,35 @@
-.burger-main_menu-container{
+.burger-main_menu-container {
     @apply absolute top-1/2 right-4 transform -translate-y-1/2;
-    
-    @screen lg{
+
+    @screen lg {
         @apply hidden;
     }
 
-    .burger-main_menu{
+    .burger-main_menu {
         @apply inline-flex items-center justify-center p-2;
-        // color: var(--twn-color-terms);
-    
-        &:focus{
+
+        /* color: var(--twn-color-terms); */
+
+        &:focus {
             @apply outline-none ring-2 ring-inset ring-indigo-500;
         }
 
-        .burger-main_menu-open{
+        .burger-main_menu-open {
             @apply flex place-items-center gap-2;
         }
-        
-        .burger-main_menu-close{
-            @apply hidden;        
+
+        .burger-main_menu-close {
+            @apply hidden;
         }
 
-        &.is-active{
+        &.is-active {
             @apply flex place-items-center gap-2;
 
-            .burger-main_menu-open{
-                @apply hidden;        
+            .burger-main_menu-open {
+                @apply hidden;
             }
 
-            .burger-main_menu-close{
+            .burger-main_menu-close {
                 @apply flex place-items-center gap-2;
             }
         }

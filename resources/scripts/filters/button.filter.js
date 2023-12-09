@@ -20,6 +20,6 @@ export function callback(settings, name) {
 
   return {
     ...settings,
-    styles: [{ label: 'Outline', name: 'outline' }],
+    styles: [{label: 'Outline', name: 'outline'}],
   };
 }

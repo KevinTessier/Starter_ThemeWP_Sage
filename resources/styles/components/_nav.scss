@@ -1,10 +1,7 @@
 .navbar {
-
     &--primary {
+        @apply w-full hidden p-4 mt-6 bg-white drop-shadow-md shadow-black rounded;
 
-        // mobile 
-        @apply bg-white drop-shadow-md shadow-black rounded;
-        @apply w-full hidden p-4 mt-6;
         &.toggled {
             @apply block;
         }
@@ -14,20 +11,17 @@
         }
     }
 
-    &__links { 
-
-        @screen lg{
+    &__links {
+        @screen lg {
             @apply w-full flex space-x-12;
         }
-
-     }
+    }
 
     &__link {
-
-        @apply block text-base relative font-body text-lg ;
+        @apply block text-base relative font-body;
 
         a {
-            @include animate_link_prepare(#0E0E0E);
+            @include animate_link_prepare(#0e0e0e);
         }
 
         a.router-link-active {
@@ -40,12 +34,11 @@
             }
         }
 
-        &.current_page_parent{
-            a{
+        &.current_page_parent {
+            a {
                 @include animate_link_active();
             }
         }
-    
     }
 
     &__link-has-children {
@@ -60,7 +53,6 @@
         button {
             @apply px-3;
         }
-
     }
 
     &__sub-links {
@@ -70,10 +62,8 @@
             @apply transform translate-y-6;
         }
 
-        @screen lg{
+        @screen lg {
             @apply absolute pl-0;
         }
-
     }
-
 }

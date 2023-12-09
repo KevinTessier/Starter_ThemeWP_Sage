@@ -13,13 +13,10 @@ window.addEventListener('DOMContentLoaded', function () {
   // });
 
   setTimeout(() => {
-
     ScrollReveal().reveal('.reveal', {
       distance: '10%',
       origin: 'bottom',
-      interval: 300
+      interval: 300,
     });
-
   }, 200);
-
 });

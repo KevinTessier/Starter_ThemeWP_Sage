@@ -38,13 +38,13 @@ class Parallax {
       r: 0,
       variable: false,
     };
-    if (this.element.dataset.parallax.startsWith("{")) {
+    if (this.element.dataset.parallax.startsWith('{')) {
       return {
         ...defaultOptions,
         ...JSON.parse(this.element.dataset.parallax),
       };
     }
-    return { ...defaultOptions, y: parseFloat(this.element.dataset.parallax) };
+    return {...defaultOptions, y: parseFloat(this.element.dataset.parallax)};
   }
 
   /**
@@ -53,12 +53,12 @@ class Parallax {
   onIntersection(entries) {
     for (const entry of entries) {
       if (entry.isIntersecting) {
-        document.addEventListener("scroll", this.onScroll);
-        window.addEventListener("resize", this.onResize);
+        document.addEventListener('scroll', this.onScroll);
+        window.addEventListener('resize', this.onResize);
         this.elementY = offsetTop(this.element) + this.element.offsetHeight / 2;
       } else {
-        document.removeEventListener("scroll", this.onScroll);
-        window.removeEventListener("resize", this.onResize);
+        document.removeEventListener('scroll', this.onScroll);
+        window.removeEventListener('resize', this.onResize);
       }
     }
   }
@@ -74,13 +74,13 @@ class Parallax {
       const diffY = this.elementY - screenY;
       const translateY = diffY * -1 * this.options.y;
       if (this.options.variable) {
-        this.element.style.setProperty("--parallaxY", `${translateY}px`);
+        this.element.style.setProperty('--parallaxY', `${translateY}px`);
       } else {
         let transform = `translateY(${translateY}px)`;
         if (this.options.r) {
           transform += ` rotate(${diffY * this.options.r}deg)`;
         }
-        this.element.style.setProperty("transform", transform);
+        this.element.style.setProperty('transform', transform);
       }
     });
   }
@@ -89,10 +89,10 @@ class Parallax {
    * @returns {Parallax[]}
    */
   static bind() {
-    return Array.from(document.querySelectorAll("[data-parallax]")).map(
+    return Array.from(document.querySelectorAll('[data-parallax]')).map(
       (element) => {
         return new Parallax(element);
-      }
+      },
     );
   }
 }

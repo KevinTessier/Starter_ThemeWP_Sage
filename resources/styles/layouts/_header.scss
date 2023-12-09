@@ -1,5 +1,4 @@
 .header {
-
     &[role='banner'] {
         @apply flex flex-wrap items-center justify-between px-5 py-5 top-0 left-0 right-0 z-50;
 
@@ -7,7 +6,7 @@
             @apply justify-between space-x-6;
         }
     }
- 
+
     &__container {
         @apply w-full flex items-center justify-between relative;
 
@@ -21,12 +20,10 @@
             @screen lg {
                 @apply hidden;
             }
-
         }
-
     }
 
-    &__primary{
+    &__primary {
         @apply fixed top-0 left-0 right-0;
     }
 }

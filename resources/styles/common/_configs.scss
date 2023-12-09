@@ -1,14 +1,14 @@
-// VARIABLE
-$smoothScrolling: false; // active Smooth Scrolling - Active to classes js
+/* VARIABLE */
+$smoothScrolling: false; /* active Smooth Scrolling - Active to classes js */
 
-// FONT SIZE
+/* FONT SIZE */
 $fontsizeH1: var(--wp--preset--font-size--text-2xl);
 $fontsizeH2: var(--wp--preset--font-size--text-xl);
 $fontsizeH3: var(--wp--preset--font-size--text-lg);
 $fontsizeH4: var(--wp--preset--font-size--text-base);
 $fontsizeBase: var(--wp--preset--font-size--text-base);
 
-//LINE HEIGHT
+/* LINE HEIGHT */
 $lineHeightNone: var(--wp--preset--line-height--leading-none);
 $lineHeightTight: var(--wp--preset--line-height--leading-tight);
 $lineHeightSnug: var(--wp--preset--line-height--leading-snug);
@@ -16,23 +16,25 @@ $lineHeightNormal: var(--wp--preset--line-height--leading-normal);
 $lineHeightRelaxed: var(--wp--preset--line-height--leading-relaxed);
 $lineHeightLoose: var(--wp--preset--line-height--leading-loose);
 
-// FONT FAMILLY
-$FontBody:var(--wp--preset--font-familly--font-body);
-$FontTitle:var(--wp--preset--font-familly--font-title);
+/* FONT FAMILLY */
+$FontBody: var(--wp--preset--font-familly--font-body);
+$FontTitle: var(--wp--preset--font-familly--font-title);
 
-// GAP COLUMNS
+/* GAP COLUMNS */
 $gapDestop: 2rem;
 $gapMobile: 1rem;
 
-// FONT FACE
+/* FONT FACE */
 @font-face {
-  font-family: 'your-font';
-  src: local('your-font'), local('your-font-name'),
-      url('@fonts/your-font.woff2') format('woff2'),
-      url('@fonts/your-font.woff') format('woff'),
-      url('@fonts/your-font.ttf') format('truetype'),
-      url('@fonts/your-font.svg#your-font') format('svg');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: your-font;
+    src:
+        local('your-font'),
+        local('your-font-name'),
+        url('@fonts/your-font.woff2') format('woff2'),
+        url('@fonts/your-font.woff') format('woff'),
+        url('@fonts/your-font.ttf') format('truetype'),
+        url('@fonts/your-font.svg#your-font') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
