@@ -31,6 +31,7 @@
         "@roots/bud-sass": "6.16.1",
         "@roots/bud-stylelint": "6.16.1",
         "@roots/bud-tailwindcss": "6.16.1",
+        "@roots/eslint-config": "^6.18.0",
         "@roots/sage": "6.16.1",
         "@shufo/prettier-plugin-blade": "^1.13.4",
         "prettier-plugin-tailwindcss": "^0.5.9"
