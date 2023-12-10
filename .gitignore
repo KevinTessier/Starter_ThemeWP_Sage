@@ -3,5 +3,5 @@
 /public
 .env
 .budfiles
-npm-debug.log
-yarn-error.log
+pnpm-lock.yaml
+composer.lock
