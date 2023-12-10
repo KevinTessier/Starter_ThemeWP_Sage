@@ -1,81 +1,81 @@
 @mixin animate_link_prepare($color) {
-  @apply relative;
+    @apply relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: -0.2rem;
-    left: 0;
-    background-color: $color;
-    transform-origin: bottom right;
-    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: -0.2rem;
+        left: 0;
+        background-color: $color;
+        transform-origin: bottom right;
+        transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    }
 }
 
 @mixin animate_link_active() {
-  &::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-  }
+    &::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    }
 }
 
 @keyframes loader {
-  0% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
 
-  4.9% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
 
-  5% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
 
-  100% {
-    top: 0;
-    left: 0;
-    width: 72px;
-    height: 72px;
-    opacity: 0;
-  }
+    100% {
+        top: 0;
+        left: 0;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
 }
 
 @keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-    animation-timing-function: ease-in-out;
-  }
+    0% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
 
-  50% {
-    transform: translateY(-20px);
-    animation-timing-function: ease-in-out;
-  }
+    50% {
+        transform: translateY(-20px);
+        animation-timing-function: ease-in-out;
+    }
 
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-in-out;
-  }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
 }

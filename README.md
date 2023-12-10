@@ -36,10 +36,10 @@ Sage is an open source project and completely free to use. If you've benefited f
 
 Sage is a WordPress starter theme with block editor support.
 
-- Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn)
-- Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade)
-- Modern frontend development workflow powered by [Bud](https://bud.js.org/)
-- Out of the box support for [Tailwind CSS](https://tailwindcss.com/)
+-   Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn)
+-   Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade)
+-   Modern frontend development workflow powered by [Bud](https://bud.js.org/)
+-   Out of the box support for [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
 
@@ -47,8 +47,8 @@ See the [Sage installation documentation](https://roots.io/sage/docs/installatio
 
 ## Stay Connected
 
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
+-   Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
+-   Participate on [Roots Discourse](https://discourse.roots.io/)
+-   Follow [@rootswp on Twitter](https://twitter.com/rootswp)
+-   Read the [Roots Blog](https://roots.io/blog/)
+-   Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)

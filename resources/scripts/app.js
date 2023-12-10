@@ -6,8 +6,8 @@ import ToogleBurger from '@scripts/features/toogleBurger.js';
  * Application entrypoint
  */
 domReady(async () => {
-  ToogleBurger.init();
-  // ScrollSmooth.init();
+    ToogleBurger.init();
+    // ScrollSmooth.init();
 });
 
 /**
