@@ -4,9 +4,9 @@ const config = {
   theme: {
     extend: {
       colors: {}, // Extend Tailwind's default colors
-      fontFamily:{
-        title : "arial",
-        body : "arial"
+      fontFamily: {
+        title: 'arial',
+        body: 'arial',
       },
       container: {
         center: true,

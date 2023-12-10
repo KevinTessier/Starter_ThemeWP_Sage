@@ -1,4 +1,4 @@
-const {dependencies, devDependencies} = require(`./package.json`)
+const {dependencies, devDependencies} = require(`./package.json`);
 
 /**
  * bud.js pnpm compatibility shim
@@ -20,10 +20,10 @@ module.exports = {
      */
     readPackage(data) {
       // Skip processing if the package is not a @roots/* package
-      if (!data.name.startsWith(`@roots`)) return data
+      if (!data.name.startsWith(`@roots`)) return data;
 
       // Skip processing if the package does not have peerDependencies
-      if (!data.peerDependencies) return data
+      if (!data.peerDependencies) return data;
 
       // Filter out peerDependencies that are already listed as dependencies or devDependencies
       const peerDependencies = Object.entries(data.peerDependencies)
@@ -38,14 +38,14 @@ module.exports = {
             [signifier]: version,
           }),
           {},
-        )
+        );
 
       // Return the package data with the filtered peerDependencies
       // and an empty peerDependenciesMeta object
       return Object.assign(data, {
         peerDependencies,
         peerDependenciesMeta: {},
-      })
+      });
     },
   },
-}
+};

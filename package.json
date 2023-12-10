@@ -20,11 +20,13 @@
     "lint": "yarn lint:js && yarn lint:css",
     "lint:js": "eslint resources/scripts",
     "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
-    "test": "yarn lint"
+    "test": "yarn lint",
+    "write": "prettier . --write"
   },
   "devDependencies": {
     "@roots/bud": "6.16.1",
     "@roots/bud-postcss": "6.16.1",
+    "@roots/bud-prettier": "6.16.0",
     "@roots/bud-sass": "6.16.1",
     "@roots/bud-stylelint": "6.16.1",
     "@roots/bud-tailwindcss": "6.16.1",

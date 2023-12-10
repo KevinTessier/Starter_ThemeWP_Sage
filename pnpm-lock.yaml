@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@roots/bud': 6.16.1
   '@roots/bud-postcss': 6.16.1
+  '@roots/bud-prettier': 6.16.0
   '@roots/bud-sass': 6.16.1
   '@roots/bud-stylelint': 6.16.1
   '@roots/bud-tailwindcss': 6.16.1
@@ -11,7 +12,8 @@ specifiers:
 devDependencies:
   '@roots/bud': 6.16.1
   '@roots/bud-postcss': 6.16.1
-  '@roots/bud-sass': 6.16.1_4xlul2sv3ya2ni5fvjc7fjnqea
+  '@roots/bud-prettier': 6.16.0
+  '@roots/bud-sass': 6.16.1_yctz5olszefx7cksqipqkg4xgi
   '@roots/bud-stylelint': 6.16.1_webpack@5.89.0
   '@roots/bud-tailwindcss': 6.16.1
   '@roots/sage': 6.16.1_@babel+core@7.23.5
@@ -1791,6 +1793,17 @@ packages:
       - webpack-cli
     dev: true
 
+  /@roots/browserslist-config/6.16.0:
+    resolution: {integrity: sha512-yHGp5uweRPh11xuvINCTzTVlz7qTwQxpoEUvlTmPkyVjE/HgJoowa8b3YgxNvVq7eTZqx42EwxL0ARJgGutJcg==}
+    engines: {node: '>=16'}
+    requiresBuild: true
+    dependencies:
+      browserslist: 4.21.10
+      execa: 7.2.0
+      tslib: 2.6.2
+      update-browserslist-db: 1.0.11_browserslist@4.21.10
+    dev: true
+
   /@roots/browserslist-config/6.16.1:
     resolution: {integrity: sha512-Gz6gBQdUJCIlDtgrZcSN1GhI5KbKvsyIYp2pRDynfc00rk2aYmBGk/cxrzjQxoeNf98906eCuvhy7bw/46ygPA==}
     engines: {node: '>=16'}
@@ -1800,6 +1813,34 @@ packages:
       execa: 7.2.0
       tslib: 2.6.2
       update-browserslist-db: 1.0.11_browserslist@4.21.10
+    dev: true
+
+  /@roots/bud-api/6.16.0:
+    resolution: {integrity: sha512-94v5UCaA7C/aF7QpFV9oSIqSKHEtm89rMS+3Ff/wdeRAmYM1qY6LtA55UvuCKaT5W+lh3SyhS52XknNIOJroMQ==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud-extensions': 6.16.0
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-minify': 6.16.0
+      '@roots/bud-support': 6.16.0
+      '@roots/container': 6.16.0
+      chalk: 5.3.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@parcel/css'
+      - '@swc/core'
+      - '@swc/css'
+      - '@types/react'
+      - bufferutil
+      - clean-css
+      - csso
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
     dev: true
 
   /@roots/bud-api/6.16.1:
@@ -1857,12 +1898,53 @@ packages:
       - webpack-cli
     dev: true
 
+  /@roots/bud-build/6.16.0:
+    resolution: {integrity: sha512-+VTy3IwZKuI6QIcy3v/zXZLebsD4clJnIrOKUy/d/trupqNod+cxMBsyV92duYhGwrC49bV71A9Da2OHLMiIhA==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-support': 6.16.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
   /@roots/bud-build/6.16.1:
     resolution: {integrity: sha512-oEcGZNTTKICF1QF0lnmKXxDGaj24O+y64svTwjS8DZsYPO9uk4cYnoTUAIC9n6JEtZvimJj/00Y/T5c8YO49tg==}
     engines: {node: '>=16'}
     dependencies:
       '@roots/bud-framework': 6.16.1
       '@roots/bud-support': 6.16.1
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
+  /@roots/bud-cache/6.16.0:
+    resolution: {integrity: sha512-UTYyUow4vI5u9lBDilMEUuPQycQg+hYGMhVruaSGnWqwYx0HuOZYJxyC45POgLv6pLYzSlOTXa9NlSMZqaS7Jg==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-support': 6.16.0
+      strip-ansi: 7.1.0
       tslib: 2.6.2
     transitivePeerDependencies:
       - '@swc/core'
@@ -1898,11 +1980,40 @@ packages:
       - webpack-cli
     dev: true
 
+  /@roots/bud-client/6.16.0:
+    resolution: {integrity: sha512-eixf9fygdr1lZE16GTiHANsQsed2MmPn7GlvHbTCWaubUfjo8bIEH+2NA8zRF+TZlYHLoJjKjIEI70e2cGM0Ig==}
+    engines: {node: '>=16'}
+    dependencies:
+      tslib: 2.6.2
+    dev: true
+
   /@roots/bud-client/6.16.1:
     resolution: {integrity: sha512-usPeYq0k71dxRLhTsjcObvMcs6EWnLY1Yr7rJ0+GsQryOKb7QR2tlr78QObRDJz4QdXeUHN/ssLTqph7dmcC4Q==}
     engines: {node: '>=16'}
     dependencies:
       tslib: 2.6.2
+    dev: true
+
+  /@roots/bud-compiler/6.16.0:
+    resolution: {integrity: sha512-Ug+1H8VybBZsi2QrVVzfwzxwSnG4oH5hUcOaLdtgEZqsyQMSc9qNbRVSKdEJ3YIi2kS5M1kEXKtaz5KQa9yklQ==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud-dashboard': 6.16.0
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-support': 6.16.0
+      react: 18.2.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
     dev: true
 
   /@roots/bud-compiler/6.16.1:
@@ -1927,12 +2038,53 @@ packages:
       - webpack-cli
     dev: true
 
+  /@roots/bud-dashboard/6.16.0:
+    resolution: {integrity: sha512-ycj+I8CjK7MFuDMqgmjU9ddWpMd1IusASQGczmUiRLAGH6gJo1hG0l2eDq8sg9KZa4pvp/DuIN8UgLhPIEeUuA==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-support': 6.16.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
   /@roots/bud-dashboard/6.16.1:
     resolution: {integrity: sha512-ZK5BOtZ1ZdmnLAIJXVFosaBXN5dLsAjqLrvHzIHSQPm2bIl4FlOUSzbn4/G/dQCz8X9WnqG+nb6hMQvldf0gGQ==}
     engines: {node: '>=16'}
     dependencies:
       '@roots/bud-framework': 6.16.1
       '@roots/bud-support': 6.16.1
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
+  /@roots/bud-entrypoints/6.16.0:
+    resolution: {integrity: sha512-o/38WgeDIieg9Pk/Kkd5R5I2V6EodyTRZF8cY5UCblJtmxkCelLr0LkANRWExYKxV4MVHxALqAB6cIPHs9Jl/w==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud': 6.16.0
+      '@roots/bud-framework': 6.16.0
+      '@roots/entrypoints-webpack-plugin': 6.16.0
       tslib: 2.6.2
     transitivePeerDependencies:
       - '@swc/core'
@@ -1968,6 +2120,32 @@ packages:
       - webpack-cli
     dev: true
 
+  /@roots/bud-extensions/6.16.0:
+    resolution: {integrity: sha512-e98CQvA6W/zXLnnB32JiiGq8K3uBryZe6CXxgS8+7zzL7/RN6EN9Gb2PTbJmp/lzy//iy0R5b4sxxz+xkPvqbQ==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-minify': 6.16.0
+      '@roots/bud-support': 6.16.0
+      '@roots/container': 6.16.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@parcel/css'
+      - '@swc/core'
+      - '@swc/css'
+      - '@types/react'
+      - bufferutil
+      - clean-css
+      - csso
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
   /@roots/bud-extensions/6.16.1:
     resolution: {integrity: sha512-5wpidajzF67MUXuJvgusPmEJos+op8ZFT5YxbMc9pyMUhCHty9ZOm+faUDkGFARSkJFgKeh4F7p3qrL5STs7JQ==}
     engines: {node: '>=16'}
@@ -1985,6 +2163,31 @@ packages:
       - bufferutil
       - clean-css
       - csso
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
+  /@roots/bud-framework/6.16.0:
+    resolution: {integrity: sha512-mnOOx4bc0oPOGgraQ2bcJnU4JUSkEa8IV6HVvWQLr6lmepVKYmyQ7uAmTTvYVavgykoHTagiW3TPtNNXjM1DPg==}
+    engines: {node: '>=16'}
+    requiresBuild: true
+    dependencies:
+      '@roots/bud-support': 6.16.0
+      '@roots/container': 6.16.0
+      '@roots/filesystem': 6.16.0
+      chalk: 5.3.0
+      execa: 7.2.0
+      tslib: 2.6.2
+      webpack: 5.88.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
       - debug
       - esbuild
       - react-devtools-core
@@ -2019,6 +2222,26 @@ packages:
       - webpack-cli
     dev: true
 
+  /@roots/bud-hooks/6.16.0:
+    resolution: {integrity: sha512-kRIEkV7r4gA/YJt5dAt1zcYdzafRnKm2YWO2Qwwa0/9FZBYK4Y3cTsZcJYyhwNcaN3zALodjEIYAIJSS9gqE5Q==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-support': 6.16.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
   /@roots/bud-hooks/6.16.1:
     resolution: {integrity: sha512-DE1MdqkDmRfWQ1ZqEjvU737l3/ZD08UVtuUYtbIgYCf95bTRPTPpd20slnDHp9QGfKRNe5+uKpaA5M6Z9cq6gA==}
     engines: {node: '>=16'}
@@ -2030,6 +2253,36 @@ packages:
       - '@swc/core'
       - '@types/react'
       - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
+  /@roots/bud-minify/6.16.0:
+    resolution: {integrity: sha512-GMzl6B0+RFGFFLZ5H9hk3gmq49Mk90ocqGZNAvDBye5FJp6Cc/Ac/Rca35qb4r5Yaw09mW4lmizo+6CFmWlO8g==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud': 6.16.0
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-support': 6.16.0
+      css-minimizer-webpack-plugin: 5.0.1_clnybris7kb6i5tasv75ujyxmi
+      lightningcss: 1.21.7
+      terser: 5.19.2
+      terser-webpack-plugin: 5.3.9_webpack@5.88.2
+      tslib: 2.6.2
+      webpack: 5.88.2
+    transitivePeerDependencies:
+      - '@parcel/css'
+      - '@swc/core'
+      - '@swc/css'
+      - '@types/react'
+      - bufferutil
+      - clean-css
+      - csso
       - debug
       - esbuild
       - react-devtools-core
@@ -2158,6 +2411,32 @@ packages:
       - webpack-plugin-serve
     dev: true
 
+  /@roots/bud-prettier/6.16.0:
+    resolution: {integrity: sha512-lZ1g2HjMzCRKdt0KCbm+4Pz6jrNEUecEFByNjhijaYZT08sHqiJ/iabZ5KvGmvWkMqjJ7LY5z4WjN4uzCxee8w==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud': 6.16.0
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-support': 6.16.0
+      prettier: 3.0.2
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@parcel/css'
+      - '@swc/core'
+      - '@swc/css'
+      - '@types/react'
+      - bufferutil
+      - clean-css
+      - csso
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
   /@roots/bud-react/6.16.1_@babel+core@7.23.5:
     resolution: {integrity: sha512-Q4iHVHpXfAC7IyPxQCqTkGjRVzK2CGxk8m7vWGgy/d6VKm/VLmyGnHMs3LInio384zRoQdPsQppeaikNvama8A==}
     engines: {node: '>=16'}
@@ -2192,7 +2471,7 @@ packages:
       - webpack-plugin-serve
     dev: true
 
-  /@roots/bud-sass/6.16.1_4xlul2sv3ya2ni5fvjc7fjnqea:
+  /@roots/bud-sass/6.16.1_yctz5olszefx7cksqipqkg4xgi:
     resolution: {integrity: sha512-e8bYA4f7wqvK9NmO6UMbuFVdiOHc5A69kG6b2p+ZP0moRB8Vcdn8wt1L9QKUGh4Si+bgg1rxt3nRrnhYVxhClQ==}
     engines: {node: '>=16'}
     dependencies:
@@ -2203,8 +2482,8 @@ packages:
       resolve-url-loader: 5.0.0
       sass: 1.66.1
       sass-loader: 13.3.2_sass@1.66.1+webpack@5.89.0
-      stylelint-config-recommended-scss: 12.0.0_u5ucc5iszemqxspg4mxkpb32le
-      stylelint-scss: 5.1.0_stylelint@15.11.0
+      stylelint-config-recommended-scss: 12.0.0_wfujqnjkjwnrqwj3crnyhz5lim
+      stylelint-scss: 5.1.0_stylelint@15.10.3
       tslib: 2.6.2
     transitivePeerDependencies:
       - '@swc/core'
@@ -2222,6 +2501,27 @@ packages:
       - uglify-js
       - utf-8-validate
       - webpack
+      - webpack-cli
+    dev: true
+
+  /@roots/bud-server/6.16.0:
+    resolution: {integrity: sha512-JyzT5FZ5tBna9yk6z+0B2HNQakMUhEIY0EsXtV/sic0qMDg3HmGtu8GxNsxHdYbmwrD+xiXUHdSM7GZ5wl8Kag==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/bud-client': 6.16.0
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-support': 6.16.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
       - webpack-cli
     dev: true
 
@@ -2269,6 +2569,81 @@ packages:
       - uglify-js
       - utf-8-validate
       - webpack
+      - webpack-cli
+    dev: true
+
+  /@roots/bud-support/6.16.0:
+    resolution: {integrity: sha512-/6ekPOfZPC2QgtlLnQptgQ5Hsd5pMhSKFDVL7s6xQsV0GUGtsnxsZtq5KD0sCfdMqaX3fQulhwr6TD3oFzVFcA==}
+    engines: {node: '>=16'}
+    dependencies:
+      '@roots/filesystem': 6.16.0
+      ansi-escapes: 6.2.0
+      ansi-regex: 6.0.1
+      axios: 1.4.0
+      chalk: 5.3.0
+      chokidar: 3.5.3
+      clean-stack: 5.2.0
+      clean-webpack-plugin: 4.0.0_webpack@5.88.2
+      clipanion: 4.0.0-rc.2_typanion@3.14.0
+      cookie-parser: 1.4.6
+      copy-webpack-plugin: 11.0.0_webpack@5.88.2
+      css-loader: 6.8.1_webpack@5.88.2
+      csv-loader: 3.0.5
+      dotenv: 16.3.1
+      dotenv-expand: 10.0.0
+      env-paths: 3.0.0
+      esbuild-wasm: 0.18.20
+      execa: 7.2.0
+      express: 4.18.2
+      figures: 5.0.0
+      file-loader: 6.2.0_webpack@5.88.2
+      get-port: 7.0.0
+      globby: 13.2.2
+      http-proxy-middleware: 3.0.0-beta.1
+      human-readable: 0.2.1
+      import-meta-resolve: 2.2.2
+      ink: 4.3.1_react@18.2.0
+      ink-ansi: 1.0.0_ink@4.3.1+react@18.2.0
+      ink-big-text: 2.0.0_ink@4.3.1+react@18.2.0
+      ink-gradient: 3.0.0_ink@4.3.1
+      ink-spinner: 5.0.0_ink@4.3.1+react@18.2.0
+      ink-text-input: 5.0.1_ink@4.3.1+react@18.2.0
+      json5: 2.2.3
+      lodash: 4.17.21
+      mini-css-extract-plugin: 2.7.6_webpack@5.88.2
+      mini-svg-data-uri: 1.4.4
+      minimist: 1.2.8
+      node-notifier: 10.0.1
+      open: 9.1.0
+      open-editor: 4.1.0
+      parse-semver: 1.1.1
+      patch-console: 2.0.0
+      pretty-format: 29.6.3
+      react: 18.2.0
+      remark: 14.0.3
+      remark-html: 15.0.2
+      remark-loader: 5.0.0_7vwtd2vsws7mlkq7v2syl3ufjy
+      signale: 1.4.0
+      strip-ansi: 7.1.0
+      style-loader: 3.3.3_webpack@5.88.2
+      toml: 3.0.0
+      tslib: 2.6.2
+      typanion: 3.14.0
+      unicoderegexp: 0.4.1
+      webpack: 5.88.2
+      webpack-dev-middleware: 6.1.1_webpack@5.88.2
+      webpack-manifest-plugin: 5.0.0_webpack@5.88.2
+      yml-loader: 2.1.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@types/react'
+      - bufferutil
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
       - webpack-cli
     dev: true
 
@@ -2462,6 +2837,43 @@ packages:
       - webpack-cli
     dev: true
 
+  /@roots/bud/6.16.0:
+    resolution: {integrity: sha512-OH3M7BnDictE901sDq6RKsBQcCpP9bVJ/Mi/MGcbnUzQwoTKvTKRLT9o6s2hYXGhOilnAn3tPLDtsjSjaNu8PQ==}
+    engines: {node: '>=16.0.0'}
+    hasBin: true
+    dependencies:
+      '@roots/browserslist-config': 6.16.0
+      '@roots/bud-api': 6.16.0
+      '@roots/bud-build': 6.16.0
+      '@roots/bud-cache': 6.16.0
+      '@roots/bud-client': 6.16.0
+      '@roots/bud-compiler': 6.16.0
+      '@roots/bud-dashboard': 6.16.0
+      '@roots/bud-entrypoints': 6.16.0
+      '@roots/bud-extensions': 6.16.0
+      '@roots/bud-framework': 6.16.0
+      '@roots/bud-hooks': 6.16.0
+      '@roots/bud-minify': 6.16.0
+      '@roots/bud-server': 6.16.0
+      '@roots/bud-support': 6.16.0
+      tslib: 2.6.2
+    transitivePeerDependencies:
+      - '@parcel/css'
+      - '@swc/core'
+      - '@swc/css'
+      - '@types/react'
+      - bufferutil
+      - clean-css
+      - csso
+      - debug
+      - esbuild
+      - react-devtools-core
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+    dev: true
+
   /@roots/bud/6.16.1:
     resolution: {integrity: sha512-OsdnHpddzfzVAjWoT2pSSs1OwHOG3bnenjp64dl+Vv83FsF/tk11dn7heCtocfjoP5LpIxc7nthiBjKLBpXCOQ==}
     engines: {node: '>=16.0.0'}
@@ -2499,6 +2911,15 @@ packages:
       - webpack-cli
     dev: true
 
+  /@roots/container/6.16.0:
+    resolution: {integrity: sha512-Wk38qiYdKdsBhnvmEf4M72RltATciXS974RQniL/tZDFR6vX28BsjFRx35JqxEVuV3FHeCPbcQgC+t2yiJBMtQ==}
+    engines: {node: '>=16'}
+    dependencies:
+      helpful-decorators: 2.1.0
+      lodash: 4.17.21
+      tslib: 2.6.2
+    dev: true
+
   /@roots/container/6.16.1:
     resolution: {integrity: sha512-4pXxueoQyEhqRoxHOBfhdqsG+xe1m9U8bl1uAzprtu5IgFJhwfamSqg2CxN+icobU4+YGQwhb5a8ISZcWCyiHQ==}
     engines: {node: '>=16'}
@@ -2506,6 +2927,22 @@ packages:
       helpful-decorators: 2.1.0
       lodash: 4.17.21
       tslib: 2.6.2
+    dev: true
+
+  /@roots/entrypoints-webpack-plugin/6.16.0:
+    resolution: {integrity: sha512-ldcrpRfc6i4ETF/nXh8jHsKmNytS/Xi+UlmHhnzz6SYLMYXh0Wm9nArzm3icTrDZxtY2aCEHi62teKMzgE218g==}
+    engines: {node: '>=16'}
+    dependencies:
+      helpful-decorators: 2.1.0
+      lodash: 4.17.21
+      tapable: 2.2.1
+      tslib: 2.6.2
+      webpack: 5.88.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
+      - webpack-cli
     dev: true
 
   /@roots/entrypoints-webpack-plugin/6.16.1:
@@ -2522,6 +2959,21 @@ packages:
       - esbuild
       - uglify-js
       - webpack-cli
+    dev: true
+
+  /@roots/filesystem/6.16.0:
+    resolution: {integrity: sha512-+Fn03xqjt63pFVyOY88+htSpApiyhGt1xk46MypzETCWzvBl54mB0wNiD0fbj8921gU9TZi1JDSvPSydA8m5Ow==}
+    engines: {node: '>=16'}
+    dependencies:
+      fs-jetpack: 5.1.0
+      globby: 13.2.2
+      helpful-decorators: 2.1.0
+      js-yaml: 4.1.0
+      json5: 2.2.3
+      lodash: 4.17.21
+      mime-types: 2.1.35
+      safe-json-stringify: 1.2.0
+      tslib: 2.6.2
     dev: true
 
   /@roots/filesystem/6.16.1:
@@ -4314,13 +4766,6 @@ packages:
       flat-cache: 3.2.0
     dev: true
 
-  /file-entry-cache/7.0.2:
-    resolution: {integrity: sha512-TfW7/1iI4Cy7Y8L6iqNdZQVvdXn0f8B4QcIXmkIbtTIe/Okm/nSlHb4IwGzRVOd3WfSieCgvf5cMzEfySAIl0g==}
-    engines: {node: '>=12.0.0'}
-    dependencies:
-      flat-cache: 3.2.0
-    dev: true
-
   /file-loader/6.2.0_webpack@5.88.2:
     resolution: {integrity: sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==}
     engines: {node: '>= 10.13.0'}
@@ -5309,10 +5754,6 @@ packages:
 
   /known-css-properties/0.28.0:
     resolution: {integrity: sha512-9pSL5XB4J+ifHP0e0jmmC98OGC1nL8/JjS+fi6mnTlIf//yt/MfVLtKg7S6nCtj/8KTcWX7nRlY0XywoYY1ISQ==}
-    dev: true
-
-  /known-css-properties/0.29.0:
-    resolution: {integrity: sha512-Ne7wqW7/9Cz54PDt4I3tcV+hAyat8ypyOGzYRJQfdxnnjeWsTxt1cy8pjvvKeI5kfXuyvULyeeAvwvvtAX3ayQ==}
     dev: true
 
   /lightningcss-darwin-arm64/1.21.7:
@@ -7082,6 +7523,12 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /prettier/3.0.2:
+    resolution: {integrity: sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
   /pretty-format/29.6.3:
     resolution: {integrity: sha512-ZsBgjVhFAj5KeK+nHfF1305/By3lechHQSMWCTl8iHSbfOm2TN5nHEtFc/+W7fAyUeCs2n5iow72gld4gW0xDw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -7796,7 +8243,7 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: true
 
-  /stylelint-config-recommended-scss/12.0.0_u5ucc5iszemqxspg4mxkpb32le:
+  /stylelint-config-recommended-scss/12.0.0_wfujqnjkjwnrqwj3crnyhz5lim:
     resolution: {integrity: sha512-5Bb2mlGy6WLa30oNeKpZvavv2lowJUsUJO25+OA68GFTemlwd1zbFsL7q0bReKipOSU3sG47hKneZ6Nd+ctrFA==}
     peerDependencies:
       postcss: ^8.3.3
@@ -7807,17 +8254,17 @@ packages:
     dependencies:
       postcss: 8.4.32
       postcss-scss: 4.0.7_postcss@8.4.32
-      stylelint: 15.11.0
-      stylelint-config-recommended: 12.0.0_stylelint@15.11.0
-      stylelint-scss: 5.1.0_stylelint@15.11.0
+      stylelint: 15.10.3
+      stylelint-config-recommended: 12.0.0_stylelint@15.10.3
+      stylelint-scss: 5.1.0_stylelint@15.10.3
     dev: true
 
-  /stylelint-config-recommended/12.0.0_stylelint@15.11.0:
+  /stylelint-config-recommended/12.0.0_stylelint@15.10.3:
     resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
       stylelint: ^15.5.0
     dependencies:
-      stylelint: 15.11.0
+      stylelint: 15.10.3
     dev: true
 
   /stylelint-config-recommended/13.0.0_stylelint@15.10.3:
@@ -7839,7 +8286,7 @@ packages:
       stylelint-config-recommended: 13.0.0_stylelint@15.10.3
     dev: true
 
-  /stylelint-scss/5.1.0_stylelint@15.11.0:
+  /stylelint-scss/5.1.0_stylelint@15.10.3:
     resolution: {integrity: sha512-E+KlQFXv1Euha43qw3q+wKBSli557wxbbo6/39DWhRNXlUa9Cz+FYrcgz+PT6ag0l6UisCYjAGCNhoSl4FcwlA==}
     peerDependencies:
       stylelint: ^14.5.1 || ^15.0.0
@@ -7848,7 +8295,7 @@ packages:
       postcss-resolve-nested-selector: 0.1.1
       postcss-selector-parser: 6.0.13
       postcss-value-parser: 4.2.0
-      stylelint: 15.11.0
+      stylelint: 15.10.3
     dev: true
 
   /stylelint-webpack-plugin/4.1.1_6qjnhjz6dsl4cao33ohwcjotbi:
@@ -7894,56 +8341,6 @@ packages:
       imurmurhash: 0.1.4
       is-plain-object: 5.0.0
       known-css-properties: 0.28.0
-      mathml-tag-names: 2.1.3
-      meow: 10.1.5
-      micromatch: 4.0.5
-      normalize-path: 3.0.0
-      picocolors: 1.0.0
-      postcss: 8.4.32
-      postcss-resolve-nested-selector: 0.1.1
-      postcss-safe-parser: 6.0.0_postcss@8.4.32
-      postcss-selector-parser: 6.0.13
-      postcss-value-parser: 4.2.0
-      resolve-from: 5.0.0
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      style-search: 0.1.0
-      supports-hyperlinks: 3.0.0
-      svg-tags: 1.0.0
-      table: 6.8.1
-      write-file-atomic: 5.0.1
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /stylelint/15.11.0:
-    resolution: {integrity: sha512-78O4c6IswZ9TzpcIiQJIN49K3qNoXTM8zEJzhaTE/xRTCZswaovSEVIa/uwbOltZrk16X4jAxjaOhzz/hTm1Kw==}
-    engines: {node: ^14.13.1 || >=16.0.0}
-    hasBin: true
-    dependencies:
-      '@csstools/css-parser-algorithms': 2.3.2_qabfbasg4cggam7o7issvon7wi
-      '@csstools/css-tokenizer': 2.2.1
-      '@csstools/media-query-list-parser': 2.1.5_vhcwb4dquzanhfkhxuqink5gke
-      '@csstools/selector-specificity': 3.0.0_c3vcbepomgmxc74cgtawpgpkyi
-      balanced-match: 2.0.0
-      colord: 2.9.3
-      cosmiconfig: 8.3.6
-      css-functions-list: 3.2.1
-      css-tree: 2.3.1
-      debug: 4.3.4
-      fast-glob: 3.3.2
-      fastest-levenshtein: 1.0.16
-      file-entry-cache: 7.0.2
-      global-modules: 2.0.0
-      globby: 11.1.0
-      globjoin: 0.1.4
-      html-tags: 3.3.1
-      ignore: 5.3.0
-      import-lazy: 4.0.0
-      imurmurhash: 0.1.4
-      is-plain-object: 5.0.0
-      known-css-properties: 0.29.0
       mathml-tag-names: 2.1.3
       meow: 10.1.5
       micromatch: 4.0.5

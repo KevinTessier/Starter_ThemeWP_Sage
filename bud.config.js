@@ -62,8 +62,8 @@ export default async (app) => {
       },
       typography: {
         customFontSize: false,
-        fluid:true,
-        fontSizes:[
+        fluid: true,
+        fontSizes: [
           {
             slug: 'text-xs',
             size: '0.75rem',
@@ -182,7 +182,7 @@ export default async (app) => {
             },
           },
         ],
-        'line-height':[
+        'line-height': [
           {
             slug: 'leading-none',
             size: '1',
@@ -213,10 +213,10 @@ export default async (app) => {
             size: '2',
             name: 'leading-loose',
           },
-        ]
+        ],
       },
     })
     .useTailwindColors()
-    .useTailwindFontFamily()
-    // .useTailwindFontSize();
+    .useTailwindFontFamily();
+  // .useTailwindFontSize();
 };
