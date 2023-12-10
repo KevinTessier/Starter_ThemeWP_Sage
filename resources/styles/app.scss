@@ -3,21 +3,19 @@
 @import 'tailwindcss/utilities';
 
 /* Import Commom */
-@import 'common/config';
+@import 'common/configs';
 @import 'common/global';
 @import 'common/typographies';
+@import 'common/accessibilite';
 @import 'common/animations';
 @import 'common/wp_class_extend';
 
 /* Import Layout styles */
-@import 'layouts/_header.scss';
-@import 'layouts/_footer.scss';
-@import 'layouts/pages';
-@import 'layouts/singles';
-@import 'layouts/archives';
+@import 'layouts/header';
+@import 'layouts/footer';
 
 /* Import componenents styles */
-@import 'components/_burger';
-@import 'components/_nav';
-@import 'components/_forms';
-@import 'components/_loaders';
+@import 'components/burger';
+@import 'components/nav';
+@import 'components/forms';
+@import 'components/loaders';

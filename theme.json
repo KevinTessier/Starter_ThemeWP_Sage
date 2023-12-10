@@ -5,11 +5,12 @@
   "settings": {
     "color": {
       "custom": false,
-      "customGradient": false,
       "customDuotone": false,
+      "customGradient": false,
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
+      "duotone": [],
       "palette": [
         {
           "color": "inherit",
@@ -1248,20 +1249,16 @@
         }
       ]
     },
-    "custom": {
-      "spacing": {},
-      "typography": {
-        "font-size": {},
-        "line-height": {}
-      }
-    },
     "spacing": {
       "padding": false,
-      "units": ["px", "%", "rem"]
+      "units": [
+        "px",
+        "%",
+        "rem"
+      ]
     },
     "typography": {
       "customFontSize": false,
-      "dropCap": false,
       "fluid": true,
       "fontSizes": [
         {
@@ -1382,11 +1379,38 @@
           }
         }
       ],
-      "line-height": {
-        "slug": "leading-none",
-        "size": "1",
-        "name": "leading-none\t"
-      },
+      "line-height": [
+        {
+          "slug": "leading-none",
+          "size": "1",
+          "name": "leading-none\t"
+        },
+        {
+          "slug": "leading-tight",
+          "size": "1.25",
+          "name": "leading-tight"
+        },
+        {
+          "slug": "leading-snug",
+          "size": "1.375",
+          "name": "leading-snug"
+        },
+        {
+          "slug": "leading-normal",
+          "size": "1.5",
+          "name": "leading-normal"
+        },
+        {
+          "slug": "leading-relaxed",
+          "size": "1.625",
+          "name": "leading-relaxed"
+        },
+        {
+          "slug": "leading-loose",
+          "size": "2",
+          "name": "leading-loose"
+        }
+      ],
       "fontFamilies": [
         {
           "fontFamily": "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
@@ -1402,6 +1426,16 @@
           "fontFamily": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
           "name": "Ui-monospace",
           "slug": "mono"
+        },
+        {
+          "fontFamily": "arial",
+          "name": "Arial",
+          "slug": "title"
+        },
+        {
+          "fontFamily": "arial",
+          "name": "Arial",
+          "slug": "body"
         }
       ]
     }

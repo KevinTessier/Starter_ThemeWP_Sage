@@ -1,74 +1,74 @@
 .wpcf7-form {
-    @apply w-full max-w-2xl mx-auto mt-12 text-xl;
+  @apply w-full max-w-2xl mx-auto mt-12 text-xl;
 
-    &.invalid,
-    &.failed {
-        .wpcf7-response-output {
-            @apply border-0 text-red-800;
-        }
+  &.invalid,
+  &.failed {
+    .wpcf7-response-output {
+      @apply border-0 text-red-800;
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    @apply text-red-800;
+  }
+
+  .wrapper-flex {
+    p {
+      @screen md {
+        @apply flex space-x-6;
+      }
+    }
+  }
+
+  .wpcf7-text {
+    @apply bg-transparent border-2 border-transparent border-b-black px-2 py-1 w-full;
+
+    &:focus,
+    &:valid {
+      @apply font-medium;
     }
 
-    .wpcf7-not-valid-tip {
-        @apply text-red-800;
+    &:focus {
+      @apply border-2 rounded border-black outline-none;
     }
 
-    .wrapper-flex {
-        p {
-            @screen md {
-                @apply flex space-x-6;
-            }
-        }
+    &:autofill {
+      background-clip: text;
+      -webkit-text-fill-color: black;
+      transition: background-color 5000s ease-in-out 0s;
+      box-shadow: inset 0 0 20px 20px #ecebeb00;
+    }
+  }
+
+  .wpcf7-email {
+    @apply w-full;
+  }
+
+  .wpcf7-textarea {
+    @apply bg-transparent w-full border-2 border-black p-2 rounded-md mt-2;
+
+    &:focus,
+    &:valid {
+      @apply font-medium;
     }
 
-    .wpcf7-text {
-        @apply bg-transparent border-2 border-transparent border-b-black px-2 py-1 w-full;
+    &:focus {
+      @apply border-2 rounded border-black outline-none;
+    }
+  }
 
-        &:focus,
-        &:valid {
-            @apply font-medium;
-        }
+  .wpcf7-submit {
+    @apply rounded-full cursor-pointer  border-black border-2 px-6 py-2 uppercase font-medium transition-all duration-300;
 
-        &:focus {
-            @apply border-2 rounded border-black outline-none;
-        }
+    max-width: 120px;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
 
-        &:autofill {
-            background-clip: text;
-            -webkit-text-fill-color: black;
-            transition: background-color 5000s ease-in-out 0s;
-            box-shadow: inset 0 0 20px 20px #ecebeb00;
-        }
+    @screen md {
+      max-width: 180px;
     }
 
-    .wpcf7-email {
-        @apply w-full;
+    &:hover {
+      @apply bg-black text-white transition-all duration-300;
     }
-
-    .wpcf7-textarea {
-        @apply bg-transparent w-full border-2 border-black p-2 rounded-md mt-2;
-
-        &:focus,
-        &:valid {
-            @apply font-medium;
-        }
-
-        &:focus {
-            @apply border-2 rounded border-black outline-none;
-        }
-    }
-
-    .wpcf7-submit {
-        @apply rounded-full cursor-pointer  border-black border-2 px-6 py-2 uppercase font-medium transition-all duration-300;
-
-        max-width: 120px;
-        font-size: clamp(1rem, 1.25vw, 1.25rem);
-
-        @screen md {
-            max-width: 180px;
-        }
-
-        &:hover {
-            @apply bg-black text-white transition-all duration-300;
-        }
-    }
+  }
 }

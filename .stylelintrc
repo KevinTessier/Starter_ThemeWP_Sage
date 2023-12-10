@@ -1,16 +1,7 @@
 {
   "extends": [
     "@roots/sage/stylelint-config",
+    "@roots/bud-sass/stylelint-config",
     "@roots/bud-tailwindcss/stylelint-config"
-  ],
-  "rules": {
-    "block-no-empty": null,
-    "indentation": 4
-  },
-  "overrides": [
-    {
-      "files": ["*.scss", "**/*.scss"],
-      "customSyntax": "postcss-scss"
-    }
   ]
 }

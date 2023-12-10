@@ -1,69 +1,69 @@
 .navbar {
-    &--primary {
-        @apply w-full hidden p-4 mt-6 bg-white drop-shadow-md shadow-black rounded;
+  &--primary {
+    @apply w-full hidden p-4 mt-6 bg-white drop-shadow-md shadow-black rounded;
 
-        &.toggled {
-            @apply block;
-        }
-
-        @screen lg {
-            @apply flex w-auto py-0 mt-0 bg-transparent rounded-none shadow-none;
-        }
+    &.toggled {
+      @apply block;
     }
 
-    &__links {
-        @screen lg {
-            @apply w-full flex space-x-12;
-        }
+    @screen lg {
+      @apply flex w-auto py-0 mt-0 bg-transparent rounded-none shadow-none;
+    }
+  }
+
+  &__links {
+    @screen lg {
+      @apply w-full flex space-x-12;
+    }
+  }
+
+  &__link {
+    @apply block text-base relative font-body;
+
+    a {
+      @include animate_link_prepare(#0e0e0e);
     }
 
-    &__link {
-        @apply block text-base relative font-body;
-
-        a {
-            @include animate_link_prepare(#0e0e0e);
-        }
-
-        a.router-link-active {
-            @include animate_link_active();
-        }
-
-        &:hover {
-            a {
-                @include animate_link_active();
-            }
-        }
-
-        &.current_page_parent {
-            a {
-                @include animate_link_active();
-            }
-        }
+    a.router-link-active {
+      @include animate_link_active();
     }
 
-    &__link-has-children {
-        @apply relative;
-
-        &.open {
-            .navbar__sub-links {
-                @apply block;
-            }
-        }
-
-        button {
-            @apply px-3;
-        }
+    &:hover {
+      a {
+        @include animate_link_active();
+      }
     }
 
-    &__sub-links {
-        @apply pl-3 hidden;
-
-        &--active {
-            @apply transform translate-y-6;
-        }
-
-        @screen lg {
-            @apply absolute pl-0;
-        }
+    &.current_page_parent {
+      a {
+        @include animate_link_active();
+      }
     }
+  }
+
+  &__link-has-children {
+    @apply relative;
+
+    &.open {
+      .navbar__sub-links {
+        @apply block;
+      }
+    }
+
+    button {
+      @apply px-3;
+    }
+  }
+
+  &__sub-links {
+    @apply pl-3 hidden;
+
+    &--active {
+      @apply transform translate-y-6;
+    }
+
+    @screen lg {
+      @apply absolute pl-0;
+    }
+  }
 }

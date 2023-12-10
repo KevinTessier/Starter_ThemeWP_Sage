@@ -3,28 +3,28 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: $FontTitle;
-    line-height: $lineHeightSnug;
+  font-family: $FontTitle;
+  line-height: $lineHeightSnug;
 }
 
 h1 {
-    font-size: $fontsizeH1;
+  font-size: $fontsizeH1;
 }
 
 h2 {
-    font-size: $fontsizeH2;
+  font-size: $fontsizeH2;
 }
 
 h3 {
-    font-size: $fontsizeH3;
+  font-size: $fontsizeH3;
 }
 
 h4 {
-    font-size: $fontsizeH4;
+  font-size: $fontsizeH4;
 }
 
 h5 {
-    font-size: $fontsizeBase;
+  font-size: $fontsizeBase;
 }
 
 p,
@@ -33,13 +33,13 @@ li,
 span,
 blockquote,
 figcaption {
-    font-family: $FontBody;
-    font-size: $fontsizeBase;
-    line-height: $lineHeightSnug;
+  font-family: $FontBody;
+  font-size: $fontsizeBase;
+  line-height: $lineHeightSnug;
 }
 
 ul,
 li,
 ol {
-    @apply list-inside list-disc;
+  @apply list-inside list-disc;
 }

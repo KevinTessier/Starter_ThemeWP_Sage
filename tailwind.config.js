@@ -4,10 +4,10 @@ const config = {
   theme: {
     extend: {
       colors: {}, // Extend Tailwind's default colors
-      // fontFamily:{
-      //   title : ['Crake'],
-      //   body : ['GalanoGrotesqueAlt']
-      // },
+      fontFamily:{
+        title : "arial",
+        body : "arial"
+      },
       container: {
         center: true,
         padding: '2rem',
