@@ -1,21 +1,21 @@
 #access-fast {
-    @apply absolute;
+  @apply absolute;
 
-    a,
-    .btn-accessibilite {
-        @apply absolute inline-block bg-white;
+  a,
+  .btn-accessibilite {
+    @apply absolute inline-block bg-white;
 
-        color: #555;
-        padding: 0.5em;
-        left: -99999rem;
-        z-index: 100;
+    color: #555;
+    padding: 0.5em;
+    left: -99999rem;
+    z-index: 100;
 
-        &:focus {
-            left: 0;
-        }
+    &:focus {
+      left: 0;
     }
+  }
 }
 
 .btn-accessibilite {
-    @apply text-clip text-left font-sans;
+  @apply text-clip text-left font-sans;
 }

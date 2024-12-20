@@ -11,41 +11,41 @@ const {dependencies, devDependencies} = require(`./package.json`);
  * @see {@link https://pnpm.io/pnpmfile} for more information on pnpmfile
  */
 module.exports = {
-    hooks: {
-        /**
-         * This hook removes peerDependencies from @roots/* packages because
-         * pnpm does not install peerDependencies marked as optional by default.
-         * This behavior differs from npm and yarn, which install peerDependencies
-         * even if they are marked as optional.
-         */
-        readPackage(data) {
-            // Skip processing if the package is not a @roots/* package
-            if (!data.name.startsWith(`@roots`)) return data;
+  hooks: {
+    /**
+     * This hook removes peerDependencies from @roots/* packages because
+     * pnpm does not install peerDependencies marked as optional by default.
+     * This behavior differs from npm and yarn, which install peerDependencies
+     * even if they are marked as optional.
+     */
+    readPackage(data) {
+      // Skip processing if the package is not a @roots/* package
+      if (!data.name.startsWith(`@roots`)) return data;
 
-            // Skip processing if the package does not have peerDependencies
-            if (!data.peerDependencies) return data;
+      // Skip processing if the package does not have peerDependencies
+      if (!data.peerDependencies) return data;
 
-            // Filter out peerDependencies that are already listed as dependencies or devDependencies
-            const peerDependencies = Object.entries(data.peerDependencies)
-                .filter(
-                    ([signifier]) =>
-                        Object.keys(dependencies || {}).includes(signifier) ||
-                        Object.keys(devDependencies || {}).includes(signifier),
-                )
-                .reduce(
-                    (peerDependencies, [signifier, version]) => ({
-                        ...peerDependencies,
-                        [signifier]: version,
-                    }),
-                    {},
-                );
+      // Filter out peerDependencies that are already listed as dependencies or devDependencies
+      const peerDependencies = Object.entries(data.peerDependencies)
+        .filter(
+          ([signifier]) =>
+            Object.keys(dependencies || {}).includes(signifier) ||
+            Object.keys(devDependencies || {}).includes(signifier),
+        )
+        .reduce(
+          (peerDependencies, [signifier, version]) => ({
+            ...peerDependencies,
+            [signifier]: version,
+          }),
+          {},
+        );
 
-            // Return the package data with the filtered peerDependencies
-            // and an empty peerDependenciesMeta object
-            return Object.assign(data, {
-                peerDependencies,
-                peerDependenciesMeta: {},
-            });
-        },
+      // Return the package data with the filtered peerDependencies
+      // and an empty peerDependenciesMeta object
+      return Object.assign(data, {
+        peerDependencies,
+        peerDependenciesMeta: {},
+      });
     },
+  },
 };

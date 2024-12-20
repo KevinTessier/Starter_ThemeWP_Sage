@@ -4,14 +4,14 @@
 
 @include('sections.header')
 
-  <main id="main" class="main container min-h-screen" role="main">
-    @yield('content')
-  </main>
+<main class="main container min-h-screen" id="main" role="main">
+  @yield('content')
+</main>
 
-  @hasSection('sidebar')
-    <aside class="sidebar">
-      @yield('sidebar')
-    </aside>
-  @endif
+@hasSection('sidebar')
+  <aside class="sidebar">
+    @yield('sidebar')
+  </aside>
+@endif
 
 @include('sections.footer')

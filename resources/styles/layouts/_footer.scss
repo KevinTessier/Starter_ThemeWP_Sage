@@ -1,31 +1,31 @@
 .footer {
-    &[role='banner'] {
-        @apply left-0 right-0 top-0 z-50 flex flex-wrap items-center justify-between px-12 py-12;
+  &[role='banner'] {
+    @apply left-0 right-0 top-0 z-50 flex flex-wrap items-center justify-between px-12 py-12;
 
-        @screen lg {
-            @apply justify-between space-x-6;
-        }
+    @screen lg {
+      @apply justify-between space-x-6;
+    }
+  }
+
+  &__container {
+    @apply relative flex w-full items-center justify-between;
+
+    @screen lg {
+      @apply w-auto;
     }
 
-    &__container {
-        @apply relative flex w-full items-center justify-between;
+    & > button {
+      @apply block;
 
-        @screen lg {
-            @apply w-auto;
-        }
-
-        & > button {
-            @apply block;
-
-            @screen lg {
-                @apply hidden;
-            }
-        }
+      @screen lg {
+        @apply hidden;
+      }
     }
+  }
 
-    ul,
-    li,
-    ol {
-        @apply list-none font-title font-bold;
-    }
+  ul,
+  li,
+  ol {
+    @apply list-none font-title font-bold;
+  }
 }

@@ -1,21 +1,20 @@
 {
-    "plugins": ["prettier-plugin-tailwindcss", "@shufo/prettier-plugin-blade"],
-    "overrides": [
-        {
-            "files": ["*.blade.php"],
-            "options": {
-                "parser": "blade",
-                "tabWidth": 4,
-                "sortTailwindcssClasses": true,
-                "sortHtmlAttributes": "code-guide"
-            }
-        }
-    ],
-    "bracketSpacing": false,
-    "jsxBracketSameLine": true,
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 4,
-    "trailingComma": "all",
-    "useTabs": false
+  "plugins": ["prettier-plugin-tailwindcss", "@shufo/prettier-plugin-blade"],
+  "overrides": [
+    {
+      "files": ["*.blade.php"],
+      "options": {
+        "parser": "blade",
+        "tabWidth": 2,
+        "sortTailwindcssClasses": true,
+        "sortHtmlAttributes": "code-guide"
+      }
+    }
+  ],
+  "bracketSpacing": false,
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false
 }
