@@ -24,16 +24,16 @@
         "write": "prettier . --write"
     },
     "devDependencies": {
-        "@roots/bud": "6.16.1",
-        "@roots/bud-eslint": "6.16.0",
-        "@roots/bud-postcss": "6.16.1",
-        "@roots/bud-prettier": "6.16.0",
-        "@roots/bud-sass": "6.16.1",
-        "@roots/bud-stylelint": "6.16.1",
-        "@roots/bud-tailwindcss": "6.16.1",
-        "@roots/eslint-config": "^6.18.0",
-        "@roots/sage": "6.16.1",
-        "@shufo/prettier-plugin-blade": "^1.13.4",
-        "prettier-plugin-tailwindcss": "^0.5.9"
+        "@roots/bud": "6.24.0",
+        "@roots/bud-eslint": "6.24.0",
+        "@roots/bud-postcss": "6.24.0",
+        "@roots/bud-prettier": "6.24.0",
+        "@roots/bud-sass": "6.24.0",
+        "@roots/bud-stylelint": "6.24.0",
+        "@roots/bud-tailwindcss": "6.24.0",
+        "@roots/eslint-config": "^6.24.0",
+        "@roots/sage": "6.24.0",
+        "@shufo/prettier-plugin-blade": "^1.14.1",
+        "prettier-plugin-tailwindcss": "^0.6.9"
     }
 }
