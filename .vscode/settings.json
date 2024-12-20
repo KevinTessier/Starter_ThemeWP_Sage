@@ -1,6 +1,6 @@
 {
   "css.customData": [".vscode/tailwind.json"],
   "emmet.includeLanguages": {
-      "blade": "html"
-  },
+    "blade": "html"
+  }
 }

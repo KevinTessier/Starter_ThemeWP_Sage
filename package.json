@@ -37,8 +37,8 @@
     "prettier-plugin-tailwindcss": "^0.6.9"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.42",
     "fork-ukiyojs": "^4.2.1",
+    "lenis": "^1.1.18",
     "scrollreveal": "^4.0.9"
   }
 }
