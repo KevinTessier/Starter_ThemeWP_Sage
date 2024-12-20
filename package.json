@@ -35,5 +35,10 @@
         "@roots/sage": "6.24.0",
         "@shufo/prettier-plugin-blade": "^1.14.1",
         "prettier-plugin-tailwindcss": "^0.6.9"
+    },
+    "dependencies": {
+        "@studio-freight/lenis": "^1.0.42",
+        "fork-ukiyojs": "^4.2.1",
+        "scrollreveal": "^4.0.9"
     }
 }
