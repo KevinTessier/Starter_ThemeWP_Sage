@@ -5,3 +5,4 @@
 .budfiles
 pnpm-lock.yaml
 composer.lock
+.pnpm-store
