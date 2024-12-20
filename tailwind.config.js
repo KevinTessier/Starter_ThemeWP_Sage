@@ -26,8 +26,8 @@ const config = {
         '9xl': 'var(--wp--preset--font-size--9xl)',
       },
       fontFamily: {
+        body: 'Inter',
         title: 'arial',
-        body: 'arial',
       },
       container: {
         center: true,

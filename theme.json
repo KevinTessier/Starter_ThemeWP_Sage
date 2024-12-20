@@ -61,14 +61,14 @@
           "slug": "mono"
         },
         {
-          "fontFamily": "arial",
-          "name": "Arial",
-          "slug": "title"
+          "fontFamily": "Inter",
+          "name": "Inter",
+          "slug": "body"
         },
         {
           "fontFamily": "arial",
           "name": "Arial",
-          "slug": "body"
+          "slug": "title"
         }
       ],
       "fontSizes": [

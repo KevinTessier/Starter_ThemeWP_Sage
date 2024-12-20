@@ -23,7 +23,7 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/docs/bud.setPublicPath}
    */
-  app.setPublicPath('public/');
+  app.setPublicPath('/app/themes/starter_theme/public/');
 
   /**
    * Development server settings
@@ -83,7 +83,7 @@ export default async (app) => {
         padding: false,
         units: [],
         customSpacingSize: false,
-        defaultSpacingSizes:false,
+        defaultSpacingSizes: false,
         spacingSizes: {},
         spacingScale: {},
       },
