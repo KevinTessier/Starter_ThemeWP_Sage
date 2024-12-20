@@ -32,13 +32,13 @@
       "defaultAspectRatios": false,
       "aspectRatios": null
     },
-    "layout": {
-      "contentSize": "800px",
-      "wideSize": "1000px"
-    },
     "spacing": {
       "padding": false,
-      "units": ["px", "%", "rem"]
+      "units": [
+        "px",
+        "%",
+        "rem"
+      ]
     },
     "typography": {
       "customFontSize": false,

@@ -77,18 +77,15 @@ export default async (app) => {
         defaultAspectRatios: false,
         aspectRatios: null,
       },
-      layout: {
-        contentSize: '800px',
-        wideSize: '1000px',
-      },
       spacing: {
         blockGap: null,
         margin: false,
         padding: false,
+        units: [],
         customSpacingSize: false,
-        units: ['px', 'em', 'rem', 'vh', 'vw'],
-        spacingScale: null,
-        spacingSizes: [],
+        defaultSpacingSizes:false,
+        spacingSizes: {},
+        spacingScale: {},
       },
       typography: {
         customFontSize: false,
