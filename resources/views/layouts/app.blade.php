@@ -4,7 +4,7 @@
 
 @include('sections.header')
 
-<main class="main container min-h-screen" id="main" role="main">
+<main class="main container min-h-screen" id="main">
   @yield('content')
 </main>
 

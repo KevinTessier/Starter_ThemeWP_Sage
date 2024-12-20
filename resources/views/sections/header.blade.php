@@ -1,8 +1,8 @@
-<header class="header header__primary" role="banner">
+<header class="header header__primary">
   <section class="header__container">
     <a class="brand" href="{{ home_url('/') }}">
       <img class="logo--primary" src="/app/themes/kt-theme/resources/images/logo.svg" alt="logo principal" width="320"
-        height="auto">
+        height="">
     </a>
 
     <div class="burger-main_menu-container">

@@ -3,7 +3,4 @@
   "emmet.includeLanguages": {
       "blade": "html"
   },
-  "files.associations": {
-      "*.blade.php": "html"
-  }
 }
