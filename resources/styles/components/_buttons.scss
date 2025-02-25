@@ -1,0 +1,15 @@
+.wp-block-buttons {
+  @apply my-12;
+}
+
+.wp-block-button__link {
+  @apply inline-block gap-2 rounded-lg;
+
+  text-decoration: none !important;
+
+  &::after {
+    content: '';
+
+    @apply ml-1 inline-block h-[11px] w-[13px] bg-arrow bg-no-repeat;
+  }
+}

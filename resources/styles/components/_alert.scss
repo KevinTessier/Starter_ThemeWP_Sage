@@ -1,0 +1,6 @@
+/* STATUS */
+.error {
+  &.is-active {
+    @apply block text-red-500;
+  }
+}

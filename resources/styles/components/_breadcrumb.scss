@@ -1,0 +1,26 @@
+#breadcrumbs {
+  @apply text-xs text-primary;
+
+  a {
+    @apply text-primary;
+  }
+
+  span {
+    @apply m-0 inline list-none pl-0 text-primary;
+  }
+
+  & + span::before {
+    display: inline-block;
+    margin: 0 0.25em;
+    transform: rotate(15deg);
+    border-right: 0.1em solid currentcolor;
+    height: 0.8em;
+    content: '';
+  }
+
+  [aria-current='page'] {
+    @apply text-primary;
+
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,23 @@
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+.splide__arrow {
+  &:disabled {
+    @apply hidden;
+  }
+}
+
+.splide_partner {
+  .splide__track {
+    @apply py-0;
+  }
+}
+
+.splide_custom {
+  .splide__track {
+    @apply pb-12 pt-0;
+    @apply w-full overflow-visible;
+  }
+}

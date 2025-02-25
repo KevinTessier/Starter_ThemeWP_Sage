@@ -1,45 +1,36 @@
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: $FontTitle;
-  line-height: $lineHeightSnug;
-}
+// A TESTER
+%title {
+  line-height: 130%;
 
-h1 {
-  font-size: $fontsizeH1;
-}
+  &-primary {
+      @apply pb-2 text-8xl font-black;
+  }
 
-h2 {
-  font-size: $fontsizeH2;
-}
+  &-second {
+      @apply my-0 font-semibold uppercase;
 
-h3 {
-  font-size: $fontsizeH3;
-}
+      font-size: clamp(1.8rem, 3.3vw, 3.3rem);
 
-h4 {
-  font-size: $fontsizeH4;
-}
+      @screen sm {
+          font-size: clamp(2rem, 5vw, 5vw);
+      }
 
-h5 {
-  font-size: $fontsizeBase;
-}
+      @screen md {
+          font-size: clamp(2rem, 5vw, 5vw);
+      }
 
-p,
-a,
-li,
-span,
-blockquote,
-figcaption {
-  font-family: $FontBody;
-  font-size: $fontsizeBase;
-  line-height: $lineHeightSnug;
-}
+      @screen lg {
+          font-size: clamp(2rem, 3.2vw, 3.2vw);
+      }
+  }
 
-ul,
-li,
-ol {
-  @apply list-inside list-disc;
+  &-tertiary {
+      @apply font-bold uppercase;
+
+      font-size: clamp(1.8rem, 4vw, 3.75rem);
+  }
+  &-extra{
+      @apply font-bold uppercase;
+      font-size: clamp(1.8rem, 6vw, 5rem);
+  }
 }

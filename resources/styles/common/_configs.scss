@@ -1,28 +1,13 @@
+:root {
+  --base-translate3d: translate3d(0, 0, 0);
+  --primary-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);
+  --easeOut: cubic-bezier(0.43, 0.195, 0.02, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --base-scale3d: scale3d(1, 1, 1);
+}
+
 /* VARIABLE */
-$smoothScrolling: true; /* active Smooth Scrolling - Active to classes js */
-
-/* FONT SIZE */
-$fontsizeH1: var(--wp--preset--font-size--text-2xl);
-$fontsizeH2: var(--wp--preset--font-size--text-xl);
-$fontsizeH3: var(--wp--preset--font-size--text-lg);
-$fontsizeH4: var(--wp--preset--font-size--text-base);
-$fontsizeBase: var(--wp--preset--font-size--text-base);
-
-/* LINE HEIGHT */
-$lineHeightNone: var(--wp--preset--line-height--leading-none);
-$lineHeightTight: var(--wp--preset--line-height--leading-tight);
-$lineHeightSnug: var(--wp--preset--line-height--leading-snug);
-$lineHeightNormal: var(--wp--preset--line-height--leading-normal);
-$lineHeightRelaxed: var(--wp--preset--line-height--leading-relaxed);
-$lineHeightLoose: var(--wp--preset--line-height--leading-loose);
-
-/* FONT FAMILLY */
-$FontBody: var(--wp--preset--font-familly--font-body);
-$FontTitle: var(--wp--preset--font-familly--font-title);
-
-/* GAP COLUMNS */
-$gapDestop: 2rem;
-$gapMobile: 1rem;
+$smoothScrolling: false; /* active Smooth Scrolling - Active to classes js */
 
 /* FONT FACE */
 @font-face {

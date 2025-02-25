@@ -370,7 +370,15 @@ iframe,
 embed,
 object {
   display: block; /* 1 */
-  vertical-align: middle; /* 2 */
+}
+
+img {
+  vertical-align: bottom;
+}
+
+// /* Iframe */
+iframe {
+  @apply aspect-video h-full w-full;
 }
 
 /*
