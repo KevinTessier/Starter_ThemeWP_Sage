@@ -33,12 +33,13 @@
     "@roots/bud-tailwindcss": "6.24.0",
     "@roots/eslint-config": "^6.24.0",
     "@roots/sage": "6.24.0",
-    "@shufo/prettier-plugin-blade": "^1.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "@shufo/prettier-plugin-blade": "^1.15.3",
+    "prettier-plugin-tailwindcss": "^0.6.11"
   },
   "dependencies": {
     "fork-ukiyojs": "^4.2.1",
-    "lenis": "^1.1.18",
+    "lenis": "^1.1.21",
+    "sass-loader": "^16.0.5",
     "scrollreveal": "^4.0.9"
   }
 }
