@@ -29,8 +29,10 @@
 
       font-size: clamp(1.8rem, 4vw, 3.75rem);
   }
+
   &-extra{
       @apply font-bold uppercase;
+
       font-size: clamp(1.8rem, 6vw, 5rem);
   }
 }

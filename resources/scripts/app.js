@@ -1,5 +1,6 @@
 import domReady from '@roots/sage/client/dom-ready';
 import ToogleBurger from '@scripts/features/toogleBurger.js';
+import ClickyMenus from '@scripts/classes/ClickyMenus.js';
 // import ScrollSmooth from '@scripts/features/ScrollSmooth.js';
 
 /**
@@ -7,6 +8,8 @@ import ToogleBurger from '@scripts/features/toogleBurger.js';
  */
 domReady(async () => {
   ToogleBurger.init();
+  new ClickyMenus(document.querySelector('.navbar--primary'))
+
   // ScrollSmooth.init();
 });
 

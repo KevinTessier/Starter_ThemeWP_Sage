@@ -44,12 +44,6 @@
   &__link-has-children {
     @apply relative;
 
-    &.open {
-      .navbar__sub-links {
-        @apply block;
-      }
-    }
-
     button {
       @apply px-3;
     }
@@ -57,7 +51,9 @@
 
   &__sub-links {
     @apply hidden pl-3;
-
+    &[aria-hidden='false']{
+      @apply block pl-3;
+    }
     &--active {
       @apply translate-y-6 transform;
     }

@@ -15,7 +15,7 @@
             'menu_class' => 'navbar__links',
             'container' => false,
             'echo' => false,
-            'walker' => new App\Walkers\kt_Walker_Nav_Menu(),
+            'walker' => new App\Config\WalkerNavMenu(),
         ]) !!}
       </nav>
     @endif
