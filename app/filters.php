@@ -12,8 +12,13 @@ namespace App;
  * @return string
  */
 add_filter('excerpt_more', function () {
-    return sprintf(' &hellip; <a href="%s">%s</a>', get_permalink(), __('Continued', 'sage'));
+    return sprintf(' &hellip; ');
 });
+
+add_filter( 'excerpt_length', function() {
+    return 15;
+}, 999 );
+
 
 /**
  * Allowed block Gutenberg
@@ -29,6 +34,8 @@ add_filter( 'allowed_block_types_all', function() {
         'core/button',
         'core/group',
         'core/image',
+        'core/embed',
+        'core/columns',
 
         // active Block Custom
         // 'acf/name-block',
@@ -43,6 +50,30 @@ if(has_action("wp_body_open", "wp_global_styles_render_svg_filters"))
 
 if(has_action("wp_body_open", "gutenberg_global_styles_render_svg_filters"))
   remove_action("wp_body_open", "gutenberg_global_styles_render_svg_filters");
+
+
+
+// /*
+//  * Add shop link to the Yoast SEO breadcrumbs for a WooCommerce shop page.
+//  */
+
+// add_filter( 'wpseo_breadcrumb_links',  function ( $links ) {
+// if(is_archive())
+// {
+//     $links[1]['text'] = "Toutes nos actualités";
+// }
+// if(is_single())
+// {
+//     array_splice( $links, 1, 0, [[
+//         "url" => "/actualites/",
+//         "text" => "Toutes nos actualités"
+//     ]] );
+// }
+// return $links;
+// }
+// );
+
+
 
 // add_action("wp_enqueue_scripts", function() {
 //     try{

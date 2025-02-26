@@ -37,7 +37,7 @@ class Helpers
 
                 // Vérifier si le bloc contient des blocs enfants (innerBlocks) et les traiter récursivement
                 if (isset($value['innerBlocks']) && is_array($value['innerBlocks'])) {
-                    $cleanedBlocks = array_merge($cleanedBlocks, processBlocksRecursively($value['innerBlocks']));
+                    $cleanedBlocks = array_merge($cleanedBlocks, Helpers::processBlocksRecursively($value['innerBlocks']));
                 }
             }
         }
@@ -50,6 +50,30 @@ class Helpers
         $dateParse = date($format, $timestamp_seconds);
         return $dateParse;
     }
+
+    public static function getYouTubeVideoId($url) {
+        // Utilise une expression régulière pour extraire l'ID
+        $pattern = '/(?:https?:\/\/)?(?:www\.)?youtube\.com\/.*v=([a-zA-Z0-9_-]+)/i';
+        if (preg_match($pattern, $url, $matches)) {
+            return $matches[1];
+        }
+        return null; // Retourne null si aucun ID n'est trouvé
+    }
+
+    public static function valueExists($data, $value) {
+        foreach ($data as $key => $item) {
+            if (is_array($item)) {
+                // Recherche récursive dans les sous-éléments
+                if (Helpers::valueExists($item, $value)) {
+                    return true;
+                }
+            } elseif ($item === $value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
 
 ?>
