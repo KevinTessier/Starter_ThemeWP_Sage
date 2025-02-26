@@ -28,32 +28,41 @@ add_filter( 'allowed_block_types_all', function() {
         'core/buttons',
         'core/button',
         'core/group',
+        'core/image',
 
         // active Block Custom
         // 'acf/name-block',
     ];
 }, 10, 0 );
+// Suppression des SVG duotone de WordPress
 
+if(has_action("wp_body_open", "wp_global_styles_render_svg_filters"))
+  remove_action("wp_body_open", "wp_global_styles_render_svg_filters");
 
-/**
- * Disable extra RSS feeds.
- *
- * @return void
- */
-add_filter('feed_links_show_comments_feed', '__return_false');
+// Suppression des SVG duotone du plugin Gutenberg
 
-/**
- * Disable recent comments CSS.
- *
- * @return void
- */
-add_filter('show_recent_comments_widget_style', '__return_false');
+if(has_action("wp_body_open", "gutenberg_global_styles_render_svg_filters"))
+  remove_action("wp_body_open", "gutenberg_global_styles_render_svg_filters");
 
-// Suppression des type inutile script et style
-add_filter('script_loader_tag', function($tag, $handle){
-    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
-}, 10, 2);
+// add_action("wp_enqueue_scripts", function() {
+//     try{
+//       $styles = wp_styles();
+//       $dep = $styles->query("global-styles");
+//       if(! $dep) return;
+//       $css = $dep->extra["after"];
+//       if(! $css) return;
 
-add_filter('style_loader_tag', function($tag, $handle){
-    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
-}, 10, 2);
+//       $css = is_array($css) ? implode("; ", $css) : $css;
+//       $css = preg_replace('/--wp--preset--duotone--.*?\)\s*;/', "", $css);
+//       $css = preg_replace('/--wp--preset--gradient--.*?\)\s*;/', "", $css);
+//       $css = preg_replace('/--wp--preset--color--.*?\)\s*;/', "", $css);
+//       $css = preg_replace('/--wp--preset--shadow--.*?\)\s*;/', "", $css);
+//       $dep->extra["after"] = array($css);
+//     }
+//     catch(\Exception $ex){
+//       if(defined("WP_DEBUG") && WP_DEBUG){
+//         if(defined("WP_DEBUG_DISPLAY") && WP_DEBUG_DISPLAY) echo $ex->getMessage();
+//         if(defined("WP_DEBUG_LOG") && WP_DEBUG_LOG) error_log($ex->getMessage());
+//       }
+//     }
+//   });

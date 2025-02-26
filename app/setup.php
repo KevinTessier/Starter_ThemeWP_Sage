@@ -5,6 +5,7 @@
  */
 
 namespace App;
+
 use function Roots\bundle;
 
 /**
@@ -15,18 +16,29 @@ use function Roots\bundle;
 add_action('wp_enqueue_scripts', function () {
     bundle('app')->enqueue();
 
-    // Remove Gutenberg Block Library
-    wp_dequeue_style( 'wp-block-library' );
-    wp_dequeue_style( 'wp-block-library-theme' );
-    wp_dequeue_style( 'wc-blocks-style' );
-	wp_dequeue_style( 'classic-theme-styles');
-	wp_dequeue_style( 'global-styles');
-	wp_dequeue_style( 'core-block-supports');
+    $remove = [
+        'contact-form-7',
+        'safe-svg-svg-icon-style',
+        'wp-block-library',
+        'wp-block-library-theme',
+        'wc-blocks-style',
+    ];
+
+    foreach ($remove as $value) {
+        // Styles
+        wp_dequeue_style($value);
+        wp_deregister_style($value);
+
+        // Scripts
+        wp_dequeue_script($value);
+        wp_deregister_script($value);
+    }
 
 }, 100);
-add_action('wp_footer', function () {
-    wp_dequeue_style('core-block-supports');
-});
+
+add_action('wp_footer', function() {
+    wp_dequeue_style( 'core-block-supports');
+}, 5);
 
 
 /**
@@ -44,17 +56,15 @@ add_action('enqueue_block_editor_assets', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
-    /**
-     * Enable features from the Soil plugin if activated.
-     *
-     * @link https://roots.io/plugins/soil/
-     */
-    add_theme_support('soil', [
-        'clean-up',
-        'nav-walker',
-        'nice-search',
-        'relative-urls',
-    ]);
+
+    $cleanUp = new Config\CleanUp;
+    $cleanUp->handle();
+
+    $niceSearch = new Config\NiceSearch;
+    $niceSearch->handle();
+
+    $RelativeUrl = new Config\RelativeUrls;
+    $RelativeUrl->handle();
 
     /**
      * Disable full-site editing support.
@@ -70,6 +80,7 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage'),
     ]);
 
     /**
@@ -116,30 +127,4 @@ add_action('after_setup_theme', function () {
     ]);
 
 }, 20);
-
-add_action( 'init', function(){
-    remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
-    remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
-    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-    remove_action( 'wp_head', 'rsd_link');
-    remove_action( 'wp_head', 'wlwmanifest_link');
-    remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10);
-    remove_action( 'wp_head', 'wp_generator');
-    remove_action( 'wp_head', 'wp_shortlink_wp_head', 10);
-    remove_action( 'wp_head', 'wp_oembed_add_host_js');
-    remove_action( 'wp_head', 'feed_links_extra', 3);
-
-    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-    remove_action( 'wp_print_styles', 'print_emoji_styles' );
-    remove_action( 'admin_print_styles', 'print_emoji_styles' );
-    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-});
-
-// Suppression des SVG duotone de WordPress
-remove_action("wp_body_open", "wp_global_styles_render_svg_filters");
-
-// Suppression des SVG duotone du plugin Gutenberg
-remove_action("wp_body_open", "gutenberg_global_styles_render_svg_filters");
 

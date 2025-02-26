@@ -1,17 +1,27 @@
 <?php
 
-/**
- * Helpers class
- *
- * */
+namespace App;
 
-    function getStyleExist($asset_name) {
+/**
+ * Helper Class
+ *
+ * @param
+ * @return
+ * @version 1.0.0
+ * @see url context
+ * @author Kevin Tessier <kevin-tessier@protonmail.com>
+ */
+
+class Helpers
+{
+
+    public static function getStyleExist($asset_name) {
         $manifest_path = get_template_directory() . '/public/manifest.json';
         $manifest = json_decode(file_get_contents($manifest_path), true);
         return isset($manifest[$asset_name]) ? true : false;
     }
 
-    function processBlocksRecursively($blockArray) {
+    public static function processBlocksRecursively($blockArray) {
         $cleanedBlocks = []; // Tableau pour stocker les versions nettoyées des blockNames
 
         if (!empty($blockArray)) {
@@ -35,10 +45,11 @@
         return $cleanedBlocks; // Retourner le tableau des blockNames nettoyés
     }
 
-    function parseDate(float $date, String $format) {
+    public static function parseDate(float $date, String $format) {
         $timestamp_seconds = $date / 1000;
         $dateParse = date($format, $timestamp_seconds);
         return $dateParse;
     }
+}
 
 ?>

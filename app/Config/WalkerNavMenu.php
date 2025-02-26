@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Walkers;
+namespace App\Config;
 use Walker;
 
 /**
@@ -9,9 +9,9 @@ use Walker;
  * @see Walker
  * @see https://www.alsacreations.com/tuto/lire/1872-Menu-accessible-sur-WordPress--les-bases-dun-menu-simple.html
  * @author Kevin Tessier <kevin.tessier@protonmail.com>
- * 
+ *
  */
-class KT_Walker_Nav_Menu extends Walker {
+class WalkerNavMenu extends Walker {
 	/**
 	 * What the class handles.
 	 *
@@ -21,7 +21,7 @@ class KT_Walker_Nav_Menu extends Walker {
 	 * @see Walker::$tree_type
 	 */
 	public $tree_type = array( 'post_type', 'taxonomy', 'custom' );
-    
+
 	/**
 	 * Database fields to use.
 	 *
@@ -58,7 +58,7 @@ class KT_Walker_Nav_Menu extends Walker {
 		$indent = str_repeat( $t, $depth );
 		// Default class.
 		$classes = array( 'navbar__sub-links' );
-		
+
 		/**
 		 * Filters the CSS class(es) applied to a menu list element.
 		 *
@@ -70,9 +70,10 @@ class KT_Walker_Nav_Menu extends Walker {
 		 */
 		$class_names = implode( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-		
+
+
 		if(isset($args->parent_item)){
-			$id = 'id="navbar__sub-link-' . $args->parent_item .'"';
+			$id = 'id="navbar__sub-links-' . $args->parent_item .'"';
 		}
 
 		$output .= "{$n}{$indent}<ul$class_names{$id}>{$n}";
@@ -129,8 +130,14 @@ class KT_Walker_Nav_Menu extends Walker {
 		}
 
 		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
-		$classes   = empty( $menu_item->classes ) ? array() : (array) $menu_item->classes;
-		$classes = str_replace('menu-item', 'navbar__link', $classes);
+		$classes = empty( $menu_item->classes ) ? array() : (array) $menu_item->classes;
+        $classes = $menu_item->menu_item_parent != '0' ? ['navbar__sub-link'] : ['navbar__link'];
+
+        if($args->walker->has_children)
+        {
+            array_push($classes, 'has-children');
+        }
+
 		/**
 		 * Filters the arguments for a single nav menu item.
 		 *
@@ -217,9 +224,9 @@ class KT_Walker_Nav_Menu extends Walker {
 		 * @param stdClass $args      An object of wp_nav_menu() arguments.
 		 * @param int      $depth     Depth of menu item. Used for padding.
 		 */
-        
+
          $atts['aria-current'] = $menu_item->current ? 'page' : '';
-        
+
         if ( $menu_item->current_item_parent ) {
             $atts['aria-current'] = $menu_item->current_item_parent ? 'true' : '';
         }
@@ -254,14 +261,14 @@ class KT_Walker_Nav_Menu extends Walker {
 		$item_output .= $args->link_before . $title . $args->link_after;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
-        
+
 		// dump($menu_item->classes);
         // On vérifie si l'élément possède un sous-menu via la classe CSS "menu-item-has-children"
         $item_has_children = in_array( 'menu-item-has-children', $menu_item->classes );
 
         if ( $item_has_children ) {
             // On ajoute un bouton d'ouverture/fermeture du sous-menu
-            $item_output .= '<button type="button" aria-expanded="false" aria-controls="sub-navbar__link-' . $menu_item->ID . '">
+            $item_output .= '<button type="button" aria-expanded="false" aria-controls="navbar__sub-links-' . $menu_item->ID . '">
                                 <span aria-hidden="true">+</span>
                                 <span class="sr-only">'. __('Ouvrir le sous-menu', 'text-domain') .'</span>
                             </button>';
