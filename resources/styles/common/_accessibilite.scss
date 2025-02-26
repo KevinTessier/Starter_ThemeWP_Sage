@@ -3,24 +3,23 @@
 
   a,
   .btn_accessibilite {
-      @apply absolute block w-max rounded-full bg-secondary px-4 py-3 text-base text-primary outline-none;
-      @apply left-0 top-5 -translate-x-full transform;
+    @apply absolute block w-max rounded-full bg-secondary px-4 py-3 text-base text-primary outline-none;
+    @apply left-0 top-5 -translate-x-full transform;
 
-      z-index: 100;
-      transition: left 0.2s ease;
+    z-index: 100;
+    transition: left 0.2s ease;
 
-      &:focus {
-          @apply left-28 top-6 translate-x-0;
+    &:focus {
+      @apply left-28 top-6 translate-x-0;
 
-          transition: transform 0.2s ease;
-      }
+      transition: transform 0.2s ease;
+    }
   }
 }
-
 
 a:focus,
 .input:focus,
 textarea:focus,
 button:focus {
-    @apply rounded-md outline-none ring-2 ring-inset ring-tertiary;
+  @apply rounded-md outline-none ring-2 ring-inset ring-tertiary;
 }

@@ -8,7 +8,7 @@ import ClickyMenus from '@scripts/classes/ClickyMenus.js';
  */
 domReady(async () => {
   ToogleBurger.init();
-  new ClickyMenus(document.querySelector('.navbar--primary'))
+  new ClickyMenus(document.querySelector('.navbar--primary'));
 
   // ScrollSmooth.init();
 });

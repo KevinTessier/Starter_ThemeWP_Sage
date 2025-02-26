@@ -3,36 +3,36 @@
   line-height: 130%;
 
   &-primary {
-      @apply pb-2 text-8xl font-black;
+    @apply pb-2 text-8xl font-black;
   }
 
   &-second {
-      @apply my-0 font-semibold uppercase;
+    @apply my-0 font-semibold uppercase;
 
-      font-size: clamp(1.8rem, 3.3vw, 3.3rem);
+    font-size: clamp(1.8rem, 3.3vw, 3.3rem);
 
-      @screen sm {
-          font-size: clamp(2rem, 5vw, 5vw);
-      }
+    @screen sm {
+      font-size: clamp(2rem, 5vw, 5vw);
+    }
 
-      @screen md {
-          font-size: clamp(2rem, 5vw, 5vw);
-      }
+    @screen md {
+      font-size: clamp(2rem, 5vw, 5vw);
+    }
 
-      @screen lg {
-          font-size: clamp(2rem, 3.2vw, 3.2vw);
-      }
+    @screen lg {
+      font-size: clamp(2rem, 3.2vw, 3.2vw);
+    }
   }
 
   &-tertiary {
-      @apply font-bold uppercase;
+    @apply font-bold uppercase;
 
-      font-size: clamp(1.8rem, 4vw, 3.75rem);
+    font-size: clamp(1.8rem, 4vw, 3.75rem);
   }
 
-  &-extra{
-      @apply font-bold uppercase;
+  &-extra {
+    @apply font-bold uppercase;
 
-      font-size: clamp(1.8rem, 6vw, 5rem);
+    font-size: clamp(1.8rem, 6vw, 5rem);
   }
 }

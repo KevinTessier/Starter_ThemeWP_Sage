@@ -42,7 +42,6 @@ class CleanUp
         add_filter('get_bloginfo_rss', fn ($value) => ! Str::is($value, __('Just another WordPress site')) ? $value : '');
         add_filter('the_generator', '__return_false');
 
-
         return $this;
     }
 

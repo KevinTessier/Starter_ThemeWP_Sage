@@ -15,8 +15,7 @@ html {
   &.sr .load-hidden {
     visibility: hidden;
   }
-  .sr-only
-  {
+  .sr-only {
     @apply hidden;
   }
 

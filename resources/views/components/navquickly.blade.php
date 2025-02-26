@@ -5,6 +5,7 @@
     <li class="list-none"><a href="#primary-content" title="Accèder au contenu">Aller directement au contenu
         principal</a></li>
 
-    <li class="list-none"><a href="#primary-footer" title="Accèder au pied de page">Aller directement pied de page</a></li>
+    <li class="list-none"><a href="#primary-footer" title="Accèder au pied de page">Aller directement pied de page</a>
+    </li>
   </ul>
 </nav>

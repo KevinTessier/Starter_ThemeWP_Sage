@@ -34,11 +34,7 @@
     },
     "spacing": {
       "padding": false,
-      "units": [
-        "px",
-        "%",
-        "rem"
-      ]
+      "units": ["px", "%", "rem"]
     },
     "typography": {
       "customFontSize": false,
